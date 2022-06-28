@@ -20,9 +20,9 @@
 ![docker_ps](./assets/docker_ps.png)
 
 ​      
-이제 `Terminal` 의 `Display 3000` 탭을 눌러보세요.
+이제 아래 링크를 눌러서 우리 시스템에 접속해보세요.
 
-3000번 포트를 통해서 우리의 샘플 애플리케이션에 접속합니다.
+[ACCESS NGINX]({{TRAFFIC_HOST1_80}})
 
 ​     
 여러분의 ToDo List Manager 애플리케이션이 잘 동작하나요?
