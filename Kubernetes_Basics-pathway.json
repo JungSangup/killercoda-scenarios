@@ -1,0 +1,33 @@
+{
+  "title": "Kubernetes Basics",
+  "description": "Kubernetes 기초실습",
+  "icon": "",
+  "courses":
+  [
+    {
+        "course_id": "resources",
+        "title": "Commands & Resources",
+        "description": "쿠버네티스 명령어와 리소스"
+    },
+  	{
+        "course_id": "deployment",
+        "title": "Kubernetes Deployment Strategies",
+        "description": "쿠버네티스의 배포/업데이트 방법"
+    },
+  	{
+        "course_id": "hpa",
+        "title": "Horizontal Pod Autoscaler",
+        "description": "Horizontal Pod Autoscaler"
+    },
+    {
+        "course_id": "helm",
+        "title": "Helm - The package manager for Kubernetes",
+        "description": "Helm - The package manager for Kubernetes"
+    },
+  	{
+      "course_id": "playground",
+      "title": "٩(ˊᗜˋ*)و Kubernetes playground ",
+      "description": "Kubernetes playground"
+  	}
+  ]
+}

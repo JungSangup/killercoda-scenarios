@@ -1,0 +1,26 @@
+{
+  "title": "Docker Network",
+  "description": "Docker Network 실습",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+		{
+		  "title": "Docker network",
+		  "text": "step1.md"
+		}
+	],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 3000", "port": 3000}]
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

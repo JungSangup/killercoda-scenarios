@@ -1,0 +1,48 @@
+{
+  "title": "Kubernetes Commands & Resources",
+  "description": "Kubernetes Commands & Resources",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+		{
+		  "title": "Kubernetes Commands",
+		  "text": "step1.md"
+		},
+		{
+		  "title": "POD",
+		  "text": "step2.md"
+		},
+		{
+		  "title": "Deployment, ReplicaSet",
+		  "text": "step3.md"
+		},
+		{
+		  "title": "Service",
+		  "text": "step4.md"
+		}
+	],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "assets": {
+          "host01": [
+              {"file": "nginx2-pod.yaml", "target": "~/lab"},
+              {"file": "nginx3-pod.yaml", "target": "~/lab"},
+              {"file": "nginx-replicaset.yaml", "target": "~/lab"},
+              {"file": "nginx-deployment.yaml", "target": "~/lab"},
+              {"file": "nginx-clusterip-service.yaml", "target": "~/lab"},
+              {"file": "nginx-nodeport-service.yaml", "target": "~/lab"},
+              {"file": "nginx-loadbalancer-service.yaml", "target": "~/lab"},
+              {"file": "cloudprovider.yaml", "target": "~/lab"}
+          ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}

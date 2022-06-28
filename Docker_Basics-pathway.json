@@ -1,0 +1,48 @@
+{
+  "title": "Docker Basics",
+  "description": "Docker 기초실습",
+  "icon": "",
+  "courses":
+  [
+	{
+      "course_id": "intro",
+      "title": "Intro",
+      "description": "Docker 맛보기"
+  },
+  {
+      "course_id": "install",
+      "title": "Install docker",
+      "description": "Docker 환경구성 (Install docker)"
+  },
+	{
+      "course_id": "chroot",
+      "title": "chroot",
+      "description": "chroot를 이용한 격리"
+  },
+	{
+      "course_id": "image_layer",
+      "title": "Image layer",
+      "description": "컨테이너 이미지와 Layer 개념"
+  },
+	{
+      "course_id": "command",
+      "title": "Docker commands & Registry",
+      "description": "도커 명령어와 레지스트리 사용"
+  },
+	{
+      "course_id": "volume",
+      "title": "Docker Volume",
+      "description": "볼륨과 데이터 영속성(Persistancy)"
+  },
+	{
+      "course_id": "network",
+      "title": "Docker Network",
+      "description": "도커 네트워킹"
+  },
+	{
+      "course_id": "playground",
+      "title": "٩(ˊᗜˋ*)و Docker playground",
+      "description": "Docker playground"
+  }
+  ]
+}
