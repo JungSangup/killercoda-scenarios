@@ -1,6 +1,6 @@
 {
   "items": [
-    { "path": "Docker Basics", "title": "Docker Basics : Hands-on scenarios for Beginners" },
-    { "path": "Kubernetes Basics", "title": "Kubernetes Basics : Hands-on scenarios for Beginners" }
+    { "path": "Docker Basics", "title": "Docker Basics" },
+    { "path": "Kubernetes Basics", "title": "Kubernetes Basics" }
   ]
 }
