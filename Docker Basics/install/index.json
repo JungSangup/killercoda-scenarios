@@ -1,0 +1,24 @@
+{
+  "title": "Install Docker",
+  "description": "Docker 설치 실습",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+		{
+		  "title": "Install Docker",
+		  "text": "step1.md"
+		}
+	],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:1804"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "٩(ˊᗜˋ*)و Kubernetes playground",
+  "description": "Kubernetes playground",
+  "difficulty": "beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+		{
+		  "title": "Kubernetes playground",
+		  "text": "step1.md"
+		}
+	],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  }
+}
