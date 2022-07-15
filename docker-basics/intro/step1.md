@@ -14,7 +14,8 @@
 > 혹시 잘 안되나요?  
 > 걱정마세요. 만약을 위해서 `/root/app.zip`도 준비해뒀습니다.  
 > 아래 명령어로 압축만 풀어주세요.  
-> **명령어** : `unzip app.zip`{{exec}}
+
+![](./assets/handson.png) **명령어** : `unzip app.zip`{{exec}}
 
 ​     
 소스코드 준비가 됐으면 app 디렉토리로 이동합니다.

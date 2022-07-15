@@ -22,7 +22,7 @@
 ​      
 이제 아래 링크를 눌러서 우리 시스템에 접속해보세요.
 
-![](assets/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
+![](./assets/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 ​     
 여러분의 ToDo List Manager 애플리케이션이 잘 동작하나요?
