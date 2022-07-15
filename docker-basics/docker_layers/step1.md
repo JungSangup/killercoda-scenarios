@@ -34,7 +34,7 @@ nginx 이미지를 하나 pull 하구요.
 ​     
 이제 다시 저장된 위치가 어떻게 바뀌었나 확인해볼까요?
 
-`ls -al /var/lib/docker/overlay2`{{exec}}
+`ls -alt /var/lib/docker/overlay2`{{exec}}
 
 뭔가 많이 생겼네요.
    
@@ -81,7 +81,7 @@ nginx 이미지를 하나 pull 하구요.
 ​     
 그리고, `overlay2`디렉토리에는 R/W Layer만 추가된 걸 확인할 수 있습니다.
 
-`ls -al /var/lib/docker/overlay2`{{exec}}
+`ls -alt /var/lib/docker/overlay2`{{exec}}
 
 ​     
 같은 이미지로 여러개의 컨테이너를 실행해도, R/O Layer는 공유하고 R/W Layer만 추가해서 만들어지네요.
