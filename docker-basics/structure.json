@@ -8,11 +8,6 @@
       "description": "Docker 맛보기"
     },
     {
-      "path": "install",
-      "title": "Install docker",
-      "description": "Docker 환경구성 (Install docker)"
-    },
-    {
       "path": "chroot",
       "title": "chroot",
       "description": "chroot를 이용한 격리"
