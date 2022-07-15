@@ -50,7 +50,7 @@ Password는 `secret`{{copy}} 입니다.
 
 
 이번에는 우리의 샘플 애플리케이션을 mysql과 연계해서 실행해 보겠습니다.
-````
+```
 docker run -dp 3000:3000 \
   --network todo-app \
   --env MYSQL_HOST=mysql \
