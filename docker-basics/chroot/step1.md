@@ -57,8 +57,10 @@ bin 디렉토리에 bash 파일이 보이네요.
 ![](./assets/handson.png) **명령어** : `ldd /bin/bash`{{exec}}
 
 ​     
-그리고, 복사를 해줍니다.
+그리고, 복사를 해줍니다.  
+
 ![](./assets/handson.png) **명령어** : 
+
 ```
 mkdir -p ./new_root/lib/x86_64-linux-gnu/ ./new_root/lib64
 cp /lib/x86_64-linux-gnu/libtinfo.so.6 ./new_root/lib/x86_64-linux-gnu/
