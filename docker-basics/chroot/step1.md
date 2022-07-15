@@ -2,7 +2,14 @@
 
 컨테이너의 격리 개념을 이해하기 위해서 chroot를 이용한 격리를 실습해 보도록 하겠습니다.
 
-먼저 `chroot`가 어떤 명령어인지 알아볼까요?
+그 전에 먼저, 중간에 필요한 Utility를 하나 설치하고 시작할게요.
+
+![](./assets/handson.png) **명령어** : `sudo apt-get update`{{exec}}
+
+![](./assets/handson.png) **명령어** : `sudo apt-get install tree`{{exec}}
+
+
+이제 `chroot`가 어떤 명령어인지 알아볼까요?
 
 ![](./assets/handson.png) **명령어** : `chroot --help`{{exec}}
 
