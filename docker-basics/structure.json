@@ -11,36 +11,6 @@
       "path": "./chroot",
       "title": "chroot",
       "description": "chroot를 이용한 격리"
-    },
-    {
-      "path": "./docker_layers",
-      "title": "Docker layers",
-      "description": "컨테이너 이미지와 Layer 개념"
-    },    
-    {
-      "path": "./commands",
-      "title": "Docker commands",
-      "description": "도커 명령어와 레지스트리 사용"
-    },
-    {
-      "path": "./volume",
-      "title": "Docker Volume",
-      "description": "볼륨과 데이터 영속성(Persistancy)"
-    },
-    {
-      "path": "./network",
-      "title": "Docker Network",
-      "description": "도커 네트워킹"
-    },
-    {
-      "path": "./dockerfile",
-      "title": "Dockerfile",
-      "description": "Dockerfile & Best practices for writing Dockerfiles"
-    },    
-    {
-      "path": "./playground",
-      "title": "٩(ˊᗜˋ*)و Docker playground",
-      "description": "Docker playground"
     }
   ]
 }
