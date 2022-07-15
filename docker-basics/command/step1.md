@@ -36,13 +36,16 @@ tag를 명시하지 않은 경우는 default tag인 `latest`를 받아오네요.
 
 `--interactive --tty` 로 실행했기 때문에 ubuntu의 bash shell에 콘솔로 연결되었습니다. (프롬프트 확인!)
 
-실행된 ubuntu의 정보를 볼까요?
+실행된 ubuntu의 정보를 볼까요?  
+
 `cat /etc/os-release`{{exec}}
 
 이제 `exit`{{exec}} 명령어로 컨테이너를 빠져나와서,
 
-`ubuntu:18.04`를 실행해봅시다.
+`ubuntu:18.04`를 실행해봅시다.  
+
 `docker run --interactive --tty ubuntu:18.04 /bin/bash`{{exec}}
+
 아까와는 다르게 `tag(18.04)`를 명시해서 실행했습니다.
 
 `cat /etc/os-release`{{exec}} 의 결과는?  
