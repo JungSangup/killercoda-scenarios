@@ -3,12 +3,12 @@
   "description": "Hands-on scenarios for beginners",
   "items": [
     {
-      "path": "./intro",
+      "path": "intro",
       "title": "Intro",
       "description": "Docker 맛보기"
     },
     {
-      "path": "./chroot",
+      "path": "chroot",
       "title": "chroot",
       "description": "chroot를 이용한 격리"
     }
