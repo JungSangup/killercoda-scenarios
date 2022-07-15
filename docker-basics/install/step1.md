@@ -22,7 +22,8 @@ sudo apt-get -y install \
     curl \
     gnupg-agent \
     software-properties-common
-```{{exec}}
+```((exec))
+
 
 Docker 공식 GPG 키를 추가해주고,    
 ![](./assets/handson.png) **명령어** : `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`{{exec}}
