@@ -8,7 +8,7 @@
 
 이제 여러분의 Docker repository가 생겼습니다.  
 샘플 애플리케이션 이미지를 다시 만들어 볼까요?
-첫 번째 실습(Docker intro)을 떠올려보세요.
+첫 번째 실습(Docker intro)을 떠올려보세요. 
 
 먼저 소스코드를 Github에서 clone 합니다.
 

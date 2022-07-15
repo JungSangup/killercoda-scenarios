@@ -6,7 +6,7 @@
 ![](./assets/handson.png) **명령어** : `docker rmi --force $(docker images --all --quiet)`{{exec}}  
 > --force(-f) 옵션은 강제로 삭제를 하는 옵션이니 주의해서 사용해야 합니다.
 
-도커이미지를 검색하는 명령어는 `docker search`입니다.  
+도커이미지를 검색하는 명령어는 `docker search`입니다.   
 도커허브에서 Ubuntu 이미지를 찾아볼까요?   
 ![](./assets/handson.png) **명령어** : `docker search ubuntu`{{exec}}
 
