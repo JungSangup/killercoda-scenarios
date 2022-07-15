@@ -4,7 +4,7 @@
 
 먼저 `chroot`가 어떤 명령어인지 알아볼까요?
 
-`chroot --help`{{execute}}
+`chroot --help`{{exec}}
 
 root 디렉토리를 새로운 경로(NEWROOT)로 지정하는거라고 하네요.
 
@@ -13,11 +13,11 @@ root 디렉토리를 새로운 경로(NEWROOT)로 지정하는거라고 하네�
 
 먼저 root로 지정할 디렉토리를 하나 만들구요
 
-`mkdir new_root`{{execute}}
+`mkdir new_root`{{exec}}
 
 그리고, 방금 만든 디렉토리를 루트로 변경합니다.
 
-`chroot ./new_root /bin/bash`{{execute}}
+`chroot ./new_root /bin/bash`{{exec}}
 
 ​     
 아마, 오류가 발생할거예요.
@@ -28,21 +28,21 @@ root 디렉토리를 새로운 경로(NEWROOT)로 지정하는거라고 하네�
 
 복사를 해줄게요.
 
-`mkdir ./new_root/bin`{{execute}}
+`mkdir ./new_root/bin`{{exec}}
 
-`cp /bin/bash ./new_root/bin/`{{execute}}
+`cp /bin/bash ./new_root/bin/`{{exec}}
 
 ​     
 디렉토리 구조를 한 번 볼까요?
 
-`tree ./new_root`{{execute}}
+`tree ./new_root`{{exec}}
 
 bin 디렉토리에 bash 파일이 보이네요.
 
 ​     
 이제 다시한번 `chroot`를 실행해볼까요?
 
-`chroot ./new_root /bin/bash`{{execute}}
+`chroot ./new_root /bin/bash`{{exec}}
 
 ​     
 역시 아직 안되네요... ( Ĭ ^ Ĭ )  
@@ -54,7 +54,7 @@ bin 디렉토리에 bash 파일이 보이네요.
 ​     
 먼저 뭐가 필요한지 보구요.
 
-`ldd /bin/bash`{{execute}}
+`ldd /bin/bash`{{exec}}
 
 ​     
 그리고, 복사를 해줍니다.
@@ -65,29 +65,29 @@ cp /lib/x86_64-linux-gnu/libtinfo.so.6 ./new_root/lib/x86_64-linux-gnu/
 cp /lib/x86_64-linux-gnu/libdl.so.2 ./new_root/lib/x86_64-linux-gnu/
 cp /lib/x86_64-linux-gnu/libc.so.6 ./new_root/lib/x86_64-linux-gnu/
 cp /lib64/ld-linux-x86-64.so.2 ./new_root/lib64
-```{{execute}}  
+```{{exec}}  
 
 ​     
 디렉토리 구조 다시한번 보구요.
 
-`tree ./new_root`{{execute}}
+`tree ./new_root`{{exec}}
 
 ​     
 그리고, locale관련 처리를 하지않으면 warning이 발행하니, 아래 명령어도 한번 실행해주세요.
 
-`export LC_ALL=`{{execute}}
+`export LC_ALL=`{{exec}}
 
 ​     
 다시 `chroot`를 해봅니다.
 
-`chroot ./new_root /bin/bash`{{execute}}
+`chroot ./new_root /bin/bash`{{exec}}
 
 ​    
 ꒰( ˵¯͒ꇴ¯͒˵ )꒱ 드디어 성공입니다.
 
 ​     
-`pwd`{{execute}} 도 해보시구요, `/bin/bash --version`{{execute}} 도 해보세요.
+`pwd`{{exec}} 도 해보시구요, `/bin/bash --version`{{exec}} 도 해보세요.
 
 아래 명령어는 될까요? 안될까요?  ʅ（´◔౪◔）ʃ  
 
-`ls -al`{{execute}}
+`ls -al`{{exec}}

@@ -4,15 +4,15 @@
 직접 한번 컨테이너를 생성해서 볼까요?
 
 먼저 ubuntu 를 하나 실행합니다.
-`docker run --name my-ubuntu --detach ubuntu bash -c "echo 'Hello Docker...' > /test.txt && tail -f /dev/null"`{{execute}}  
+`docker run --name my-ubuntu --detach ubuntu bash -c "echo 'Hello Docker...' > /test.txt && tail -f /dev/null"`{{exec}}  
 간단한 txt파일을 하나 만들고 컨테이너를 `running`상태로 두기위해서 `tail`명령을 실행했습니다.
 
 이제 우리가 만든 파일을 한 번 볼까요?
-`docker exec my-ubuntu cat /test.txt`{{execute}}
+`docker exec my-ubuntu cat /test.txt`{{exec}}
 우리가 적어놓은 테스트문구가 보일거예요.
 
 이제 같은 ubuntu이미지를 이용해서 새로운 컨테이너를 실행하고, `test.txt`파일이 있나 살펴봅시다.
-`docker run -it ubuntu ls /`{{execute}}
+`docker run -it ubuntu ls /`{{exec}}
 
 당연히 없겠죠...   
 우리가 앞에서 알아본 레이어가 정확히 잘 적용되는 것 같네요.

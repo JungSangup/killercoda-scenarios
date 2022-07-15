@@ -9,13 +9,13 @@
 샘플 애플리케이션 이미지를 다시 만들어 볼까요?
 첫 번째 실습(Intro)을 떠올려보세요.
 
-`git clone https://github.com/JungSangup/todo_list_manager.git app`{{execute}}  
+`git clone https://github.com/JungSangup/todo_list_manager.git app`{{exec}}  
 
-`cd app`{{execute}}  
+`cd app`{{exec}}  
 
-`docker build --tag docker-101 .`{{execute}}  
+`docker build --tag docker-101 .`{{exec}}  
 
-`docker images docker-101`{{execute}} 명령어로 이미지가 만들어졌는지 확인해보세요.
+`docker images docker-101`{{exec}} 명령어로 이미지가 만들어졌는지 확인해보세요.
 
 이제 우리가 만든 이미지를 우리의 Docker hub repository에 업로드(push)해 보겠습니다.
 
@@ -31,7 +31,7 @@
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요. tag는 1.0.0으로 해보겠습니다.
 
 이제 다시 로컬 registry의 image를 조회해보면,  
-`docker images`{{execute}}  
+`docker images`{{exec}}  
 준비가 됐습니다.
 
 먼저 로그인을 하구요,

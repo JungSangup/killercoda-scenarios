@@ -6,13 +6,13 @@
 이제 도커 볼륨을 이용해서 데이터가 저장되는 위치를 호스트의 경로로 바꿔보겠습니다.
 
 먼저 도커 볼륨을 하나 생성합니다.
-`docker volume create todo-db`{{execute}}  
+`docker volume create todo-db`{{exec}}  
 
 생성된 볼륨을 확인하려면 아래 명령어를 사용하면 됩니다.
-`docker volume list`{{execute}}
+`docker volume list`{{exec}}
 
 그리고, 볼륨의 더 자세한 정보를 알아보려면 아래 명령어를 사용하면 됩니다.
-`docker volume inspect todo-db`{{execute}}  
+`docker volume inspect todo-db`{{exec}}  
 `Mountpoint`가 바로 실제 데이터가 저장되는 위치입니다.
 
 이제 방금 생성한 볼륨을 우리 애플리케이션의 데이터 저장경로로 마운트해서 실행해 보겠습니다.
@@ -24,7 +24,7 @@
 `Display 3000`탭을 클릭해서 애플리케이션으로 접속하고 오늘 할 일을 몇 개 적어볼까요?
 
 그리고, 컨테이너를 삭제합니다.
-`docker rm --force my-todo-manager`{{execute}}
+`docker rm --force my-todo-manager`{{exec}}
 > 컨테이너는 생성할때 --name 옵션으로 이름을 정하면, 이후에 이 이름을 이용할 수 있습니다.
 
 이전 같으면 방금 저장한 할 일이 모두 사라지고 없겠죠?
