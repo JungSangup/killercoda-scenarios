@@ -50,15 +50,15 @@ Password는 `secret`{{copy}} 입니다.
 
 
 이번에는 우리의 샘플 애플리케이션을 mysql과 연계해서 실행해 보겠습니다.
-```
-docker run -dp 3000:3000 \
+
+`docker run -dp 3000:3000 \
   --network todo-app \
   --env MYSQL_HOST=mysql \
   --env MYSQL_USER=root \
   --env MYSQL_PASSWORD=secret \
   --env MYSQL_DB=todos \
   --name my-todo-manager \
-  [USER-NAME]/101-todo-app:1.0.0```{{copy}}  
+  [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 `--network`옵션으로 mysql과 동일한 네트워크로 설정했고, `--env`를 이용해서 mysql 연계에 필요한 환경변수들을 설정해 주었습니다.
