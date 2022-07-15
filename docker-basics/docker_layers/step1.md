@@ -24,17 +24,16 @@
 
 깨끗하게 정리된 상태에서 시작해볼게요.
 
-nginx 이미지를 하나 pull 하구요.
 
+nginx 이미지를 하나 pull 하구요.  
 ![](./assets/handson.png) **명령어** : `docker pull nginx`{{exec}}
 
-확인을 합니다.
 
+확인을 합니다.  
 ![](./assets/handson.png) **명령어** : `docker images`{{exec}}
 
 ​     
-이제 다시 저장된 위치가 어떻게 바뀌었나 확인해볼까요?
-
+이제 다시 저장된 위치가 어떻게 바뀌었나 확인해볼까요?  
 ![](./assets/handson.png) **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 뭔가 많이 생겼네요.  
@@ -50,13 +49,11 @@ nginx 이미지를 하나 pull 하구요.
 다음 실습을 위해서 label(`color=red`)을 달아뒀습니다.
 
 ​     
-잘 실행되고 있나 살펴볼게요.
-
+잘 실행되고 있나 살펴볼게요.  
 ![](./assets/handson.png) **명령어** : `docker ps`{{exec}}
 
 ​     
-이제 `overlay2` 디렉토리는 어떻게 바뀌어 있을까요?
-
+이제 `overlay2` 디렉토리는 어떻게 바뀌어 있을까요?  
 ![](./assets/handson.png) **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 두 개의 디렉토리가 더 생긴걸 볼 수 있습니다.(`-t` 옵션을 사용하여 최근 디렉토리를 상위에 표시함.)
