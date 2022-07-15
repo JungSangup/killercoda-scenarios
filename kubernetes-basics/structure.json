@@ -1,7 +1,7 @@
 {
   "title": "Kubernetes Basics",
   "description": "Kubernetes 기초실습",
-  "courses": [
+  "items": [
     {
         "path": "resources",
         "title": "Commands & Resources",
