@@ -7,12 +7,12 @@
 
 실행하는 명령어는 다음과 같습니다.
 
-**명령어** : `docker run --detach --publish 3000:3000 docker-101`{{exec}}
+![](./assets/handson.png) **명령어** : `docker run --detach --publish 3000:3000 docker-101`{{exec}}
 
 ​      
 잘 실행되고 있는지 볼까요?
 
-**명령어** : `docker ps`{{exec}}
+![](./assets/handson.png) **명령어** : `docker ps`{{exec}}
 
 ​      
 아래 그림처럼 `docker-101` 이 보이면 정상입니다.
@@ -22,7 +22,7 @@
 ​      
 이제 아래 링크를 눌러서 우리 시스템에 접속해보세요.
 
-[ToDo List Manager]({{TRAFFIC_HOST1_3000}})
+![](assets/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 ​     
 여러분의 ToDo List Manager 애플리케이션이 잘 동작하나요?
