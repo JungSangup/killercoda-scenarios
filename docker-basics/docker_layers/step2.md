@@ -7,11 +7,11 @@
 
 먼저 잘 실행되고 있나 보구요.
 
-`docker ps`{{exec}}
+![](./assets/handson.png) **명령어** : `docker ps`{{exec}}
 
 잘 살아있으면, 다음 명령으로 새로운 이미지를 만들어 보겠습니다.
 
-`docker commit $(docker ps --filter "label=color=red" --quiet) nginx:my-tag`{{exec}}
+![](./assets/handson.png) **명령어** : `docker commit $(docker ps --filter "label=color=red" --quiet) nginx:my-tag`{{exec}}
 
 뭔가 복잡해 보이지만 별거 아닙니다.
 
@@ -22,26 +22,26 @@ git의 `commit` 명령어 처럼, docker도 `commit` 명령을 이용해서 새�
 ​     
 이제 어떤 이미지가 있나 조회해볼까요?
 
-`docker images`{{exec}}
+![](./assets/handson.png) **명령어** : `docker images`{{exec}}
 
 방금 우리가 `docker commit` 명령으로 만든 `nginx:my-tag`가 보이네요.
 
 ​     
 `overlay2` 디렉토리는요?
 
-`ls -alt /var/lib/docker/overlay2`{{exec}}
+![](./assets/handson.png) **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 네, 여기도 하나가 더 생겼네요.
 
 ​     
 이제 실행중인 컨테이너까지 멈추고 삭제까지 해볼게요.
 
-`docker rm -f $(docker ps --filter "label=color=red" -q)`{{exec}}
+![](./assets/handson.png) **명령어** : `docker rm -f $(docker ps --filter "label=color=red" -q)`{{exec}}
 
 ​     
 이제 `overlay2` 디렉토리는 어떻게 되었을까요?
 
-`ls -alt /var/lib/docker/overlay2`{{exec}}
+![](./assets/handson.png) **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 ​     
 처음 `docker pull`해서 생성된 layer에, `docker commit`해서 생성된 레이어만 하나 추가되어 있네요. (+1)
