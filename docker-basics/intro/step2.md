@@ -8,7 +8,7 @@
 ​     
 아래 명령어는 도커 이미지를 만드는(build) 명령어 입니다.
 
-`docker build --tag docker-101 .`{{exec}}
+> **명령어** : `docker build --tag docker-101 .`{{exec}}
 
 ​     
 터미널을 보면 뭔가 열심히 만드는 것 같네요.
@@ -20,7 +20,7 @@
 
 현재 Host에 있는 이미지를 조회하는 명령어입니다.
 
-`docker images`{{exec}}
+> **명령어** : `docker images`{{exec}}
 
 ​     
 아래 그림처럼 `docker-101` 이 보이면 성공입니다.     ٩(ˊᗜˋ*)و    

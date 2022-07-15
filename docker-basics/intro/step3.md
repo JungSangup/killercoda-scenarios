@@ -7,12 +7,12 @@
 
 실행하는 명령어는 다음과 같습니다.
 
-`docker run --detach --publish 3000:3000 docker-101`{{exec}}
+> **명령어** : `docker run --detach --publish 3000:3000 docker-101`{{exec}}
 
 ​      
 잘 실행되고 있는지 볼까요?
 
-`docker ps`{{exec}}
+> **명령어** : `docker ps`{{exec}}
 
 ​      
 아래 그림처럼 `docker-101` 이 보이면 정상입니다.
