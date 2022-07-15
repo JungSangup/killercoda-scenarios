@@ -10,7 +10,6 @@
 
 ![](./assets/handson.png) **명령어** : `docker images`{{exec}}
 
----
 ​     
 이제 우리 도커가 어떤 스토리지 드라이버를 사용하는지 알아보겠습니다.
 
@@ -43,7 +42,6 @@ nginx 이미지를 하나 pull 하구요.
 
 `docker pull` 할때 표시된 layer만큼 overlay 아래 디렉토리가 생성된걸...
 
----
 ​     
 이번엔 컨테이너를 실행해 보겠습니다.
 
