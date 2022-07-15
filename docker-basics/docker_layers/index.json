@@ -1,6 +1,6 @@
 {
-  "title": "Image layer",
-  "description": "Image layer 실습",
+  "title": "Docker layers",
+  "description": "Docker layers 실습",
   "difficulty": "beginner",
   "time": "10 minutes",
   "details": {

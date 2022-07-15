@@ -17,7 +17,7 @@
 
 $(...) 이 부분은 우리가 Label(color=red)을 붙인 컨테이너의 ID를 조회하는 명령입니다.
 
-git의 commit 명령어 처럼, docker도 commit 명령을 이용해서 새로운 이미지를 만들어 줍니다.
+git의 `commit` 명령어 처럼, docker도 `commit` 명령을 이용해서 새로운 이미지를 만들어 줍니다.
 
 ​     
 이제 어떤 이미지가 있나 조회해볼까요?
@@ -27,9 +27,9 @@ git의 commit 명령어 처럼, docker도 commit 명령을 이용해서 새로�
 방금 우리가 `docker commit` 명령으로 만든 `nginx:my-tag`가 보이네요.
 
 ​     
-overlay 디렉토리는요?
+`overlay2` 디렉토리는요?
 
-`ls -alt /var/lib/docker/overlay`{{exec}}
+`ls -alt /var/lib/docker/overlay2`{{exec}}
 
 네, 여기도 하나가 더 생겼네요.
 
@@ -39,12 +39,19 @@ overlay 디렉토리는요?
 `docker rm -f $(docker ps --filter "label=color=red" -q)`{{exec}}
 
 ​     
-이제 overlay 디렉토리는 어떻게 되었을까요?
+이제 `overlay2` 디렉토리는 어떻게 되었을까요?
 
-`ls -alt /var/lib/docker/overlay`{{exec}}
-
-​     
-처음 `docker pull`해서 생성된 layer에, `docker commit`해서 생성된 레이어만 하나 추가되어 있네요.
+`ls -alt /var/lib/docker/overlay2`{{exec}}
 
 ​     
-이번 실습은 여기까지 입니다.
+처음 `docker pull`해서 생성된 layer에, `docker commit`해서 생성된 레이어만 하나 추가되어 있네요. (+1)
+
+아래 그림을 다시한 번 떠올려 보면서 마무리 하겠습니다.
+
+<img src="./assets/container-layers.jpeg" alt="Container layers" />
+​     
+
+
+이번 실습은 여기까지 입니다.  
+
+＿〆(。╹‿ ╹ 。)

@@ -18,8 +18,8 @@
       "description": "chroot를 이용한 격리"
     },
     {
-      "path": "image_layer",
-      "title": "Image layer",
+      "path": "docker_layers",
+      "title": "Docker layers",
       "description": "컨테이너 이미지와 Layer 개념"
     },
     {
