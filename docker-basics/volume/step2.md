@@ -40,6 +40,9 @@
 `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}} 
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.  
 
+그리고 다시 아래 링크를 클릭해서 애플리케이션으로 접속해보세요.
+
+[ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 어떤가요?  
 오늘 할 일 목록이 그대로 남아있나요?  
