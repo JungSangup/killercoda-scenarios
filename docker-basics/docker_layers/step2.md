@@ -15,7 +15,7 @@
 
 뭔가 복잡해 보이지만 별거 아닙니다.
 
-$(...) 이 부분은 우리가 Label(color=red)을 붙인 컨테이너의 ID를 조회하는 명령입니다.
+`$(...)` 이 부분은 우리가 Label(`color=red`)을 붙인 컨테이너의 ID를 조회하는 명령입니다.
 
 git의 `commit` 명령어 처럼, docker도 `commit` 명령을 이용해서 새로운 이미지를 만들어 줍니다.
 
@@ -48,9 +48,8 @@ git의 `commit` 명령어 처럼, docker도 `commit` 명령을 이용해서 새�
 
 아래 그림을 다시한 번 떠올려 보면서 마무리 하겠습니다.
 
-<img src="./assets/container-layers.jpeg" alt="Container layers" />
-​     
 
+![](./assets/container-layers.jpeg)
 
 이번 실습은 여기까지 입니다.  
 
