@@ -13,6 +13,11 @@
       "description": "chroot를 이용한 격리"
     },
     {
+      "path": "docker_layers",
+      "title": "Docker layers",
+      "description": "컨테이너 이미지와 Layer 개념"
+    },    
+    {
       "path": "command",
       "title": "Docker commands",
       "description": "도커 명령어와 레지스트리 사용"
