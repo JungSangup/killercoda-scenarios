@@ -19,12 +19,7 @@
       "credits": ""
     }
   },
-  "environment": {
-    "uilayout": "terminal",
-    "showdashboard": true,
-    "dashboards": [{"name": "Display 8080", "port": 8080}]
-  },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "ubuntu"
   }
 }
