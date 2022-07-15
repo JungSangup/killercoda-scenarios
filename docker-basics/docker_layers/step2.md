@@ -49,7 +49,6 @@ git의 `commit` 명령어 처럼, docker도 `commit` 명령을 이용해서 새�
 아래 그림을 다시한 번 떠올려 보면서 마무리 하겠습니다.
 
 
-![](./assets/container-layers.jpeg)
 
 이번 실습은 여기까지 입니다.  
 
