@@ -58,8 +58,7 @@ docker run -dp 3000:3000 \
   --env MYSQL_PASSWORD=secret \
   --env MYSQL_DB=todos \
   --name my-todo-manager \
-  [USER-NAME]/101-todo-app:1.0.0
-```{{copy}}  
+  [USER-NAME]/101-todo-app:1.0.0```{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 `--network`옵션으로 mysql과 동일한 네트워크로 설정했고, `--env`를 이용해서 mysql 연계에 필요한 환경변수들을 설정해 주었습니다.
