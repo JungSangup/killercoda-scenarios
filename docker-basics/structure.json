@@ -6,6 +6,11 @@
       "path": "01_Docker_Intro",
       "title": "01. Docker intro",
       "description": "Docker 맛보기"
-    }
+    },
+    {
+      "path": "02_Docker_Layers",
+      "title": "02. Docker layers",
+      "description": "Docker layer "
+    }    
   ]
 }
