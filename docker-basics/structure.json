@@ -3,14 +3,9 @@
   "description": "Hands-on scenarios for beginners",
   "items": [
     {
-      "path": "intro",
-      "title": "Intro",
+      "path": "01_Docker_Intro",
+      "title": "01. Docker intro",
       "description": "Docker 맛보기"
-    },
-    {
-      "path": "chroot",
-      "title": "chroot",
-      "description": "chroot를 이용한 격리"
     }
   ]
 }
