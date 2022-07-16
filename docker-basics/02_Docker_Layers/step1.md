@@ -3,7 +3,7 @@
 먼저 현재 Host에 있는 컨테이너 이미지를 모두 삭제하겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker rmi --force $(docker images -aq)
+$ docker rmi --force $(docker images -aq)
 Untagged: docker-101:latest
 Deleted: sha256:25d5349823915cda37e5cb03dc0e3520ca689fa9c9c67dae71e2168d9cb1f00e
 Deleted: sha256:d86f278413c56f277591d2ea3de6739ffc8bf5b88c2cd8ba5ebaee22a28db4e2
@@ -19,9 +19,9 @@ Deleted: sha256:6df32015dd8fca2d2723961255c5131350122e035b0e57b9ba52ad47a50a9231
 모두 삭제됐는지 볼까요?
 
 ```bash
-> docker images
+$ docker images
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
->
+$
 ```
 
 > **명령어** : `docker images`{{exec}}
@@ -33,7 +33,7 @@ REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 이제 우리 도커가 어떤 스토리지 드라이버를 사용하는지 알아보겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker info | grep -i storage
+$ docker info | grep -i storage
  Storage Driver: overlay2
 ```
 
@@ -43,18 +43,16 @@ ubuntu@ip-10-0-1-14:~$ docker info | grep -i storage
 우리 시스템은 `overlay2` 드라이버이기 때문에 아래 경로가 사용됩니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ ls -al /var/lib/docker/overlay2
+$ ls -al /var/lib/docker/overlay2
 ls: cannot access '/var/lib/docker/overlay2': Permission denied
-ubuntu@ip-10-0-1-14:~$ sudo ls -al /var/lib/docker/overlay2
+$ sudo ls -al /var/lib/docker/overlay2
 total 20
 drwx--x---  3 root root 12288 Jun 17 05:55 .
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
 drwx------  2 root root  4096 Jun 17 05:55 l
 ```
 
-> **명령어** : `sudo ls -al /var/lib/docker/overlay2`{{exec}}
-
-- `docker 관련 디렉토리는 소유자가 root이기 때문에 다른 사용자가 조회하려면 sudo를 사용해야 합니다.`
+> **명령어** : `ls -al /var/lib/docker/overlay2`{{exec}}
 
 위 그림처럼 깨끗하게 정리된 상태에서 시작해볼게요.
 
@@ -63,7 +61,7 @@ drwx------  2 root root  4096 Jun 17 05:55 l
 nginx 이미지를 하나 pull 하구요.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker pull nginx
+$ docker pull nginx
 Using default tag: latest
 latest: Pulling from library/nginx
 42c077c10790: Pull complete
@@ -82,7 +80,7 @@ docker.io/library/nginx:latest
 이미지 목록을 확인을 합니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker images
+$ docker images
 REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 nginx        latest    0e901e68141f   2 weeks ago   142MB
 ```
@@ -94,7 +92,7 @@ nginx        latest    0e901e68141f   2 weeks ago   142MB
 이제 다시 저장된 위치(`/var/lib/docker/overlay2`)가 어떻게 바뀌었나 확인해볼까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ sudo ls -al /var/lib/docker/overlay2
+$ sudo ls -al /var/lib/docker/overlay2
 total 44
 drwx--x---  9 root root 12288 Jun 17 06:01 .
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
@@ -116,7 +114,7 @@ drwx------  2 root root  4096 Jun 17 06:01 l
 이번엔 컨테이너를 실행해 보겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker run --detach --label "color=red" nginx
+$ docker run --detach --label "color=red" nginx
 237e34821eea34627bc4de44741318a45a386d3d76c249ff958cad89b0ffb176
 ```
 
@@ -130,7 +128,7 @@ ubuntu@ip-10-0-1-14:~$ docker run --detach --label "color=red" nginx
 잘 실행되고 있나 살펴볼게요.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker ps
+$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
 237e34821eea   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp    ecstatic_visvesvaraya
 ```
@@ -140,7 +138,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 이제 `overlay2` 디렉토리는 어떻게 바뀌어 있을까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ sudo ls -alt /var/lib/docker/overlay2
+$ sudo ls -alt /var/lib/docker/overlay2
 total 52
 drwx--x---  5 root root  4096 Jun 17 06:04 85790c7c79f6a9ed42c56001ecbcca73a247e3dae52e70642cfa1deb8717b345
 drwx--x--- 11 root root 12288 Jun 17 06:04 .
@@ -168,7 +166,7 @@ drwx--x--- 13 root root  4096 Jun 17 02:51 ..
 그럼, 하나를 더 실행하면 어떻게 될까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker run --detach --label "color=blue" nginx
+$ docker run --detach --label "color=blue" nginx
 670302b2287fe6bc297ba9e0499c285febd4752a3faffb4eda981ee55805190c
 ```
 
@@ -179,7 +177,7 @@ ubuntu@ip-10-0-1-14:~$ docker run --detach --label "color=blue" nginx
 컨테이너를 확인해볼까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker ps
+$ docker ps
 CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS              PORTS     NAMES
 670302b2287f   nginx     "/docker-entrypoint.…"   About a minute ago   Up About a minute   80/tcp    friendly_leakey
 237e34821eea   nginx     "/docker-entrypoint.…"   12 minutes ago       Up 12 minutes       80/tcp    ecstatic_visvesvaraya
@@ -193,7 +191,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 그리고, `overlay2`디렉토리에는 R/W Layer만 추가된 걸 확인할 수 있습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ sudo ls -alt /var/lib/docker/overlay2
+$ sudo ls -alt /var/lib/docker/overlay2
 total 60
 drwx--x---  5 root root  4096 Jun 17 06:15 e00fa3a0cd51eb127520ba0e2fc6cd507b0b8c6a374a26c42813dcac5190afad
 drwx--x--- 13 root root 12288 Jun 17 06:15 .
@@ -217,7 +215,7 @@ drwx--x--- 13 root root  4096 Jun 17 02:51 ..
 다음 실습을 위해서 blue는 삭제할게요.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker rm --force $(docker ps --filter "label=color=blue" --quiet)
+$ docker rm --force $(docker ps --filter "label=color=blue" --quiet)
 670302b2287f
 ```
 
