@@ -44,8 +44,6 @@ $ docker info | grep -i storage
 
 ```bash
 $ ls -al /var/lib/docker/overlay2
-ls: cannot access '/var/lib/docker/overlay2': Permission denied
-$ sudo ls -al /var/lib/docker/overlay2
 total 20
 drwx--x---  3 root root 12288 Jun 17 05:55 .
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
@@ -92,7 +90,7 @@ nginx        latest    0e901e68141f   2 weeks ago   142MB
 이제 다시 저장된 위치(`/var/lib/docker/overlay2`)가 어떻게 바뀌었나 확인해볼까요?
 
 ```bash
-$ sudo ls -al /var/lib/docker/overlay2
+$ ls -al /var/lib/docker/overlay2
 total 44
 drwx--x---  9 root root 12288 Jun 17 06:01 .
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
@@ -105,7 +103,7 @@ drwx--x---  3 root root  4096 Jun 17 06:01 fccb8e1376f1c76242fc79698262f7498b78c
 drwx------  2 root root  4096 Jun 17 06:01 l
 ```
 
-> **명령어** : `sudo ls -al /var/lib/docker/overlay2`{{exec}}
+> **명령어** : `ls -al /var/lib/docker/overlay2`{{exec}}
 
 뭔가 많이 생겼네요.
 혹시 눈치 채셨나요?
@@ -138,7 +136,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 이제 `overlay2` 디렉토리는 어떻게 바뀌어 있을까요?
 
 ```bash
-$ sudo ls -alt /var/lib/docker/overlay2
+$ ls -alt /var/lib/docker/overlay2
 total 52
 drwx--x---  5 root root  4096 Jun 17 06:04 85790c7c79f6a9ed42c56001ecbcca73a247e3dae52e70642cfa1deb8717b345
 drwx--x--- 11 root root 12288 Jun 17 06:04 .
@@ -153,7 +151,7 @@ drwx--x---  3 root root  4096 Jun 17 06:01 fccb8e1376f1c76242fc79698262f7498b78c
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
 ```
 
-> **명령어** : `sudo ls -alt /var/lib/docker/overlay2`{{exec}}
+> **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 두 개의 디렉토리가 더 생긴걸 볼 수 있습니다. ( `-t` 옵션을 사용하여 최근 디렉토리를 상위에 표시함.)
 
@@ -191,7 +189,7 @@ CONTAINER ID   IMAGE     COMMAND                  CREATED              STATUS   
 그리고, `overlay2`디렉토리에는 R/W Layer만 추가된 걸 확인할 수 있습니다.
 
 ```bash
-$ sudo ls -alt /var/lib/docker/overlay2
+$ ls -alt /var/lib/docker/overlay2
 total 60
 drwx--x---  5 root root  4096 Jun 17 06:15 e00fa3a0cd51eb127520ba0e2fc6cd507b0b8c6a374a26c42813dcac5190afad
 drwx--x--- 13 root root 12288 Jun 17 06:15 .
@@ -208,7 +206,7 @@ drwx--x---  3 root root  4096 Jun 17 06:01 fccb8e1376f1c76242fc79698262f7498b78c
 drwx--x--- 13 root root  4096 Jun 17 02:51 ..
 ```
 
-> **명령어** : `sudo ls -alt /var/lib/docker/overlay2`{{exec}}
+> **명령어** : `ls -alt /var/lib/docker/overlay2`{{exec}}
 
 같은 이미지로 여러개의 컨테이너를 실행해도, R/O Layer는 공유하고 R/W Layer만 추가해서 만들어지네요.
 

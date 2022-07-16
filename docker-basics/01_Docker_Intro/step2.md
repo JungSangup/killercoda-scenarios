@@ -41,11 +41,11 @@ Successfully tagged docker-101:latest
 
 > **명령어** : `docker build --tag docker-101 .`{{exec}}
 
-뭔가 열심히 만든 것 같네요.
-Download도 하고, COPY도 하고, Install도 하고...
+뭔가 열심히 만든 것 같네요.  
+Download도 하고, COPY도 하고, Install도 하고...  
 ​
-이제 잘 만들어졌는지 볼까요?
-현재 Host에 있는 이미지를 조회하는 명령어입니다.
+이제 잘 만들어졌는지 볼까요?  
+현재 Host에 있는 이미지를 조회하는 명령어입니다.  
 
 ```bash
 $ docker images
