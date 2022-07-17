@@ -18,7 +18,7 @@
       "description": "Docker 명령어 실습"
     },
     {
-      "path": "04_Docker_Volumes.md",
+      "path": "04_Docker_Volumes",
       "title": "04. Docker volumes",
       "description": "Docker volume 실습"
     },
