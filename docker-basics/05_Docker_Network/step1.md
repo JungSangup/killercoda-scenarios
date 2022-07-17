@@ -108,7 +108,7 @@ mysql> exit
 Bye
 ubuntu@ip-10-0-1-14:~$
 ```
-> **명령어** : `exit;`{{exec}}
+> **명령어** : `exit`{{exec}}
 
 ---
 
@@ -126,18 +126,7 @@ rogallo/101-todo-app:1.0.0
 e831c21bfbbc9fbb6402c8dc3bbf4b0bd906ab1f0e0ad727f3fad1d37063a0db
 ```
 
-> **명령어** : 
->
-> ```bash
-> docker run -dp 3000:3000 \
-> --network todo-app \
-> --env MYSQL_HOST=mysql \
-> --env MYSQL_USER=root \
-> --env MYSQL_PASSWORD=secret \
-> --env MYSQL_DB=todos \
-> --name my-todo-manager \
-> [USER-NAME]/101-todo-app:1.0.0
-> ```{{copy}}  
+> **명령어** : `docker run -dp 3000:3000 --network todo-app --env MYSQL_HOST=mysql --env MYSQL_USER=root --env MYSQL_PASSWORD=secret --env MYSQL_DB=todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 `--network`옵션으로 mysql과 동일한 네트워크로 설정했고,  
@@ -212,7 +201,7 @@ mysql> select * from todo_items;
 
 화면에서 입력한 오늘의 할 일이 todo_items table에 잘 저장되어 있나요?
 
-`exit;` 명령으로 나와주시구요.  
-> **명령어** : `exit;`{{exec}}  
+`exit` 명령으로 나와주시구요.  
+> **명령어** : `exit`{{exec}}  
 
 여기까지 실습을 마치겠습니다.  ˘◡˘
