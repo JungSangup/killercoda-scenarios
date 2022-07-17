@@ -8,7 +8,7 @@ docker는 multi-stage build 기능을 제공하기 때문에 최종 docker 이�
 
 <br>
 
-![h:300](img/docker_multi_stage_build.PNG)
+![](./img/docker_multi_stage_build.PNG)
 
 ---
 
@@ -74,9 +74,9 @@ Successfully built 61de5a0b96a9
 Successfully tagged hellodocker:v2
 ```
 
-> **명령어** : `docker build -t hellodocker:v2 .`{{exec}}
->
-> 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.
+> **명령어** : `docker build -t hellodocker:v2 .`{{exec}}  
+>   
+> 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `docker build -t hellodocker:v2 -f ~/lab/Dockerfile2 ~/lab`{{exec}}
 
 ---
