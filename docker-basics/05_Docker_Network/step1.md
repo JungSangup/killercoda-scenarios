@@ -7,7 +7,7 @@
 먼저 docker network create명령으로 bridge network을 하나 생성하겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker network create todo-app
+$ docker network create todo-app
 8440c866efe789d8dac94820c2bbbdca4ca7a6985acff2c3136dd3be31f13203
 ```
 
@@ -20,7 +20,7 @@ ubuntu@ip-10-0-1-14:~$ docker network create todo-app
 그리고, 생성한 네트워크를 이용해서 mysql을 실행합니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker run -d \
+$ docker run -d \
     --network todo-app --network-alias mysql \
     --volume todo-mysql-data:/var/lib/mysql \
     --env MYSQL_ROOT_PASSWORD=secret \
@@ -57,7 +57,7 @@ c9d83cbd2ac8941da32d8d64103223fe1c6937c9c28507c6e19ed91fca740c98
 이제 mysql에 로그인해서 데이터베이스가 잘 생성됐나 봅시다.  
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker exec -it my-mysql mysql -p
+$ docker exec -it my-mysql mysql -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 2
@@ -106,7 +106,7 @@ mysql> show databases;
 ```bash
 mysql> exit
 Bye
-ubuntu@ip-10-0-1-14:~$
+$
 ```
 > **명령어** : `exit`{{exec}}
 
@@ -115,7 +115,7 @@ ubuntu@ip-10-0-1-14:~$
 이번에는 우리의 샘플 애플리케이션을 mysql과 연계해서 실행해 보겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker run -dp 3000:3000 \
+$ docker run -dp 3000:3000 \
 --network todo-app \
 --env MYSQL_HOST=mysql \
 --env MYSQL_USER=root \
@@ -137,7 +137,7 @@ e831c21bfbbc9fbb6402c8dc3bbf4b0bd906ab1f0e0ad727f3fad1d37063a0db
 우리 애플리케이션의 로그를 한 번 볼까요?  
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker logs my-todo-manager
+$ docker logs my-todo-manager
 Waiting for mysql:3306.
 Connected!
 Connected to mysql db at host mysql
@@ -159,7 +159,7 @@ mysql 과 잘 연결됐다는 로그가 보이시나요?
 자, 이제 다시 mysql로 로그인해서 table에 잘 저장되어 있나 확인해 보겠습니다.  
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ docker exec -it my-mysql mysql -p todos
+$ docker exec -it my-mysql mysql -p todos
 Enter password:
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A

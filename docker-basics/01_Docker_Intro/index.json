@@ -20,12 +20,7 @@
 		    "title": "Step 3 - 컨테이너 실행하기",
 		    "text": "step3.md"
 		  }
-	  ],
-    "assets": {
-        "host01": [
-            {"file": "app.zip", "target": "~/"}
-        ]
-    }
+	  ]
   },
   "backend": {
     "imageid": "ubuntu"
