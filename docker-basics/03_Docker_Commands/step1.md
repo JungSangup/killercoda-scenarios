@@ -252,7 +252,7 @@ ubuntu는 Exited 상태이고, nginx는 Running 상태 입니다.
 
 nginx가 정말 Running 상태인지 8080번 포트로 접속해서 확인도 해보세요. (아래 링크 클릭!)  
 
-![ ](img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_8080}})
+![ ](./img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_8080}})
 
 ![](./img/nginx1.png)
 

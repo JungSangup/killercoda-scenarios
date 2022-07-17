@@ -79,7 +79,7 @@ a2c03d99dc1808287614353a48cf0b95b21bc648bb757454a25fbff7e88058e3
 
 이제 실행된 애플리케이션에 접속하고 오늘 할 일을 몇 개 적어볼까요? (아래 링크 클릭!)  
 
-![ ](img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
+![ ](./img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 ![](./img/todo-list-sample3.png)
 
@@ -92,7 +92,7 @@ $ docker rm my-todo-manager
 my-todo-manager
 ```
 
-> **명령어** : `docker stop my-todo-manager`{{exec}} , `docker rm my-todo-manager`{{exec}}
+> **명령어** : `docker stop my-todo-manager`{{exec}} , `docker rm my-todo-manager`{{exec}}  
 > 컨테이너는 생성할때 --name 옵션으로 이름을 정하면, 이후에 이 이름을 이용할 수 있습니다.
 
 ---
@@ -111,7 +111,7 @@ bc7ab606fe61d12ec50ec8580963f0c169c4b6da428a3e67ecc384653cd1d161
 
 그리고 다시 우리 애플리케이션으로 접속해보세요. (아래 링크 클릭!)
 
-![ ](img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
+![ ](./img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 어떤가요? 오늘 할 일 목록이 그대로 남아있나요? **정국이와 저녁식사**도 **장보기**도 잊지않고 할 수 있게 되었습니다.
 

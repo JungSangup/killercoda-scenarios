@@ -26,7 +26,7 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS    
 
 이제 실행된 애플리케이션에 접속해볼까요? 실행된 Host의 3000번 포트로 접속하면 됩니다. (아래 링크 클릭!)  
 
-![ ](img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
+![ ](./img/hyperlink.png) [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 ---
 
