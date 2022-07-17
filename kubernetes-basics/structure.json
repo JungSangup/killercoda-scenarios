@@ -14,7 +14,7 @@
     },
     {
       "path": "09_Kubernetes_Workload(2)",
-      "title": "Kubernetes Workload(2) - ReplicaSet, Deployment",
+      "title": "09. Kubernetes Workload(2) - ReplicaSet, Deployment",
       "description": "ReplicaSet, Deployment 관리 실습"
     },
     {
@@ -40,7 +40,7 @@
     {
       "path": "14_Kubernetes_Volume",
       "title": "14. Kubernetes Volume",
-      "description": "PV/PVC 생성 및 사용 실습"
+      "description": "PVC/PV 생성 및 사용 실습"
     },
     {
       "path": "15_Helm",
