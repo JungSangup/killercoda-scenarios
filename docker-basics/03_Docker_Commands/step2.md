@@ -112,7 +112,7 @@ docker-101   latest    096cfe46290d   26 seconds ago   172MB
 $ docker tag docker-101 rogallo/101-todo-app:1.0.0
 ```
 
-> **명령어** : `docker tag docker-101 [USER-NAME]/101-todo-app:1.0.0`{{copy}}
+> **명령어** : `docker tag docker-101 [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 이제 다시 로컬 registry의 image를 조회해보면,  
@@ -142,7 +142,7 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
 ```
 
-> **명령어** : `docker login -u [USER-NAME]`{{copy}}
+> **명령어** : `docker login -u [USER-NAME]`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 아래 명령어로 docker hub의 우리 repository에 업로드(`push`) 해볼까요?
@@ -160,7 +160,7 @@ a6524c5b12a6: Mounted from library/node
 1.0.0: digest: sha256:18e19953a27c5575840214c7a8d0a3acbcd78bf695d7c8884f4c401939de8913 size: 1787
 ```
 
-> **명령어** : `docker push [USER-NAME]/101-todo-app:1.0.0`{{copy}}
+> **명령어** : `docker push [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 ---

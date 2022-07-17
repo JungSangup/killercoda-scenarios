@@ -67,7 +67,7 @@ Status: Downloaded newer image for rogallo/101-todo-app:1.0.0
 a2c03d99dc1808287614353a48cf0b95b21bc648bb757454a25fbff7e88058e3
 ```
 
-> **명령어** : `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}}
+> **명령어** : `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 여러분은 여러분의 이미지를 도커허브에서 받아와서 실행해보세요.
@@ -106,7 +106,7 @@ $ docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-
 bc7ab606fe61d12ec50ec8580963f0c169c4b6da428a3e67ecc384653cd1d161
 ```
 
-> **명령어** : `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}}
+> **명령어** : `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/101-todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 그리고 다시 우리 애플리케이션으로 접속해보세요. (아래 링크 클릭!)
