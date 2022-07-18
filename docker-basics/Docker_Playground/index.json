@@ -1,0 +1,15 @@
+{
+  "title": "٩(ˊᗜˋ*)و Docker playground",
+  "description": "٩(ˊᗜˋ*)و Docker playground",
+  "details": {   
+    "steps": [
+		  {
+		    "title": "٩(ˊᗜˋ*)و Docker playground",
+		    "text": "step1.md"
+		  }
+	  ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

@@ -28,12 +28,12 @@
       "description": "Recreate/RollingUpdate 실습"
     },
     {
-      "path": "12_Kubernetes_ConfigMaps & Secrets",
+      "path": "12_Kubernetes_ConfigMaps_&_Secrets",
       "title": "12. Kubernetes ConfigMaps & Secrets",
       "description": "ConfigMap, Secret 생성 및 사용 실습"
     },
     {
-      "path": "13_Kubernetes_Horizontal Pod Autoscaler",
+      "path": "13_Kubernetes_Horizontal_Pod_Autoscaler",
       "title": "13. Kubernetes Horizontal Pod Autoscaler",
       "description": "Horizontal Pod Autoscaler(HPA) 사용 실습"
     },
