@@ -16,7 +16,12 @@
 		    "title": "Step 2 - liveness probe 사용 해보기",
 		    "text": "step2.md"
 		  }
-	  ]
+	  ],
+    "assets": {
+        "host01": [
+            {"file": "HelloDocker.java", "target": "~/lab"}
+        ]
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
