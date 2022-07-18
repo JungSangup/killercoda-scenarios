@@ -45,7 +45,7 @@ nginx-deployment-56cb9cc9db-9rgsc   1/1     Running   0          34s   192.168.1
 nginx-deployment-56cb9cc9db-bl652   1/1     Running   0          34s   192.168.1.5   node01   <none>           <none>
 ```
 
-> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}} , `kubectl get pods -o wide`{{exec}}
+> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}} , `kubectl get pods -o wide`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-deployment.yaml`{{exec}} , `kubectl get pods -o wide`{{exec}}
@@ -59,7 +59,7 @@ controlplane $ kubectl run curlpod --image=radial/busyboxplus:curl --command -- 
 pod/curlpod created
 ```
 
-> **명령어** : `kubectl run curlpod --image=radial/busyboxplus:curl --command -- /bin/sh -c "while true; do echo hi; sleep 10; done"`{{exec}}
+> **명령어** : `kubectl run curlpod --image=radial/busyboxplus:curl --command -- /bin/sh -c "while true; do echo hi; sleep 10; done"`{{exec}}  
 
 ---
 
@@ -94,7 +94,7 @@ Commercial support is available at
 </html>
 ```
 
-> **명령어** : `kubectl exec -it curlpod -- curl http://[POD_IP]`{{copy}}
+> **명령어** : `kubectl exec -it curlpod -- curl http://[POD_IP]`{{copy}}  
 > [POD_IP]는 Nginx Pod 중 하나의 IP
 
 ---

@@ -38,7 +38,7 @@ nginx-clusterip-service   ClusterIP   10.106.200.8   <none>        80/TCP       
 nginx-nodeport-service    NodePort    10.97.15.144   <none>        80:30007/TCP   10s
 ```
 
-> **명령어** : `kubectl apply -f nginx-nodeport-service.yaml`{{exec}} , `kubectl get services`{{exec}}
+> **명령어** : `kubectl apply -f nginx-nodeport-service.yaml`{{exec}} , `kubectl get services`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-nodeport-service.yaml`{{exec}} , `kubectl get services`{{exec}}
@@ -57,7 +57,7 @@ controlplane   Ready    control-plane   70d   v1.24.0   172.30.1.2    <none>    
 node01         Ready    <none>          70d   v1.24.0   172.30.2.2    <none>        Ubuntu 20.04.3 LTS   5.4.0-88-generic   containerd://1.5.9
 ```
 
-> **명령어** : `kubectl get nodes -o wide`
+> **명령어** : `kubectl get nodes -o wide`{{exec}}
 
 ---
 
@@ -93,7 +93,7 @@ Commercial support is available at
 </html>
 ```
 
-> **명령어** : `curl http://[NODE_IP]:30007`{{copy}}
+> **명령어** : `curl http://[NODE_IP]:30007`{{copy}}  
 > [NODE_IP] 는 Node의 IP
 
 같은 클러스터 내에 있는 다른 Node의 IP,Port로도 해보세요. 될까요?   ＿φ(°-°=)

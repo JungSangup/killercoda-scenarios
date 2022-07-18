@@ -26,7 +26,7 @@ Use "kubectl <command> --help" for more information about a given command.
 Use "kubectl options" for a list of global command-line options (applies to all commands).
 ```
 
-> **명령어** : `kubectl --help`{{exec}}
+> **명령어** : `kubectl --help`{{exec}}  
 
 여러가지 명령어들을 볼 수 있고, 사용법을 알 수 있습니다.
 
@@ -42,7 +42,7 @@ Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCom
 Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:19:12Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
-> **명령어** : `kubectl version`{{exec}}
+> **명령어** : `kubectl version`{{exec}}  
 
 쿠버네티스 클러스터 정보를 확인하려면,
 
@@ -54,7 +54,7 @@ CoreDNS is running at https://172.30.1.2:6443/api/v1/namespaces/kube-system/serv
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
 
-> **명령어** : `kubectl cluster-info`{{exec}}
+> **명령어** : `kubectl cluster-info`{{exec}}  
 
 우리 클러스터의 노드목록은 아래 명령어로 알아볼 수 있습니다.
 
@@ -65,7 +65,7 @@ controlplane   Ready    control-plane   70d   v1.24.0
 node01         Ready    <none>          70d   v1.24.0
 ```
 
-> **명령어** : `kubectl get nodes`{{exec}}
+> **명령어** : `kubectl get nodes`{{exec}}  
 
 ---
 
@@ -78,7 +78,7 @@ controlplane   Ready    control-plane   70d   v1.24.0   172.30.1.2    <none>    
 node01         Ready    <none>          70d   v1.24.0   172.30.2.2    <none>        Ubuntu 20.04.3 LTS   5.4.0-88-generic   containerd://1.5.9
 ```
 
-> **명령어** : `kubectl get nodes --output wide`{{exec}}
+> **명령어** : `kubectl get nodes --output wide`{{exec}}  
 
 help와 유사하게 쿠버네티스 리소스들의 정의와 설명을 보려면 `kubectl explain` 명령을 사용하면 됩니다.
 
@@ -102,7 +102,7 @@ FIELDS:
    ... 생략 ...
 ```
 
-> **명령어** : `kubectl explain pod`{{exec}}
+> **명령어** : `kubectl explain pod`{{exec}}  
 
 ---
 
@@ -115,7 +115,7 @@ controlplane $ kubectl get pods
 No resources found in default namespace.
 ```
 
-> **명령어** : `kubectl get pods`{{exec}}
+> **명령어** : `kubectl get pods`{{exec}}  
 
 음. 아무것도 없군요...  
 지금은 **default 네임스페이스**에서 조회를 한 경우입니다.
@@ -134,7 +134,7 @@ kube-public       Active   70d
 kube-system       Active   70d
 ```
 
-> **명령어** : `kubectl get namespaces`{{exec}}
+> **명령어** : `kubectl get namespaces`{{exec}}  
 
 ---
 
@@ -156,7 +156,7 @@ kube-system   kube-proxy-xskb9                           1/1     Running   0    
 kube-system   kube-scheduler-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
 ```
 
-> **명령어** : `kubectl get pods --all-namespaces --output wide`{{exec}}
+> **명령어** : `kubectl get pods --all-namespaces --output wide`{{exec}}  
 
 시스템이 사용하는 Pod들을 보려면 kube-system 네임스페이스를 보면 됩니다.
 
@@ -176,7 +176,7 @@ kube-proxy-xskb9                           1/1     Running   0             70d  
 kube-scheduler-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
 ```
 
-> **명령어** : `kubectl get pods --namespace kube-system --output wide`{{exec}}
+> **명령어** : `kubectl get pods --namespace kube-system --output wide`{{exec}}  
 
 ---
 
@@ -213,7 +213,7 @@ spec:
   ... 생략 ...
 ```
 
-> **명령어** : `kubectl get pod kube-scheduler-controlplane --namespace kube-system --output yaml`{{exec}}
+> **명령어** : `kubectl get pod kube-scheduler-controlplane --namespace kube-system --output yaml`{{exec}}  
 
 ---
 
@@ -249,7 +249,7 @@ Containers:
     ... 생략 ...
 ```
 
-> **명령어** : `kubectl describe pod kube-scheduler-controlplane --namespace kube-system`{{exec}}
+> **명령어** : `kubectl describe pod kube-scheduler-controlplane --namespace kube-system`{{exec}}  
 
 ---
 
@@ -275,7 +275,7 @@ W0718 04:28:54.127556       1 reflector.go:324] vendor/k8s.io/client-go/informer
 ... 생략 ...
 ```
 
-> **명령어** : `kubectl logs -n kube-system kube-scheduler-controlplane`{{exec}}
+> **명령어** : `kubectl logs -n kube-system kube-scheduler-controlplane`{{exec}}  
 
 <br>
 

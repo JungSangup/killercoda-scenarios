@@ -43,7 +43,7 @@ controlplane $ kubectl apply -f nginx-deployment.yaml
 deployment.apps/nginx-deployment created
 ```
 
-> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}}
+> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-deployment.yaml`{{exec}}
@@ -67,7 +67,7 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-56cb9cc9db   3         3         3       21s
 ```
 
-> **명령어** : `kubectl get all`{{exec}}
+> **명령어** : `kubectl get all`{{exec}}  
 
 오~ 다 나오네요... ٩(ˊᗜˋ*)و
 
@@ -83,7 +83,7 @@ nginx-deployment-56cb9cc9db-h8wqn   1/1     Running   0          45s   app=my-ng
 nginx-deployment-56cb9cc9db-j2l6g   1/1     Running   0          45s   app=my-nginx,pod-template-hash=56cb9cc9db
 ```
 
-> **명령어** : `kubectl get po --show-labels`{{exec}}
+> **명령어** : `kubectl get po --show-labels`{{exec}}  
 
 
 이제 Pod 하나를 삭제(delete)해 볼까요?
@@ -93,7 +93,7 @@ controlplane $ kubectl delete po nginx-deployment-56cb9cc9db-fpdc7
 pod "nginx-deployment-56cb9cc9db-fpdc7" deleted
 ```
 
-> **명령어** : `kubectl delete po [POD-NAME]`{{copy}}
+> **명령어** : `kubectl delete po [POD-NAME]`{{copy}}  
 > [POD-NAME] 에는 앞에서 조회된 POD 중 하나의 이름을 넣어주세요.
 
 그리고, 다시 조회를 해보면...
@@ -106,7 +106,7 @@ nginx-deployment-56cb9cc9db-j2l6g   1/1     Running   0          106s   app=my-n
 nginx-deployment-56cb9cc9db-lnpql   1/1     Running   0          25s    app=my-nginx,pod-template-hash=56cb9cc9db
 ```
 
-> **명령어** : `kubectl get po --show-labels`{{exec}}
+> **명령어** : `kubectl get po --show-labels`{{exec}}  
 
 새롭게 하나의 POD가 생성된 걸 볼 수 있습니다. ReplicaSet이 자기 역할을 다하고 있는 듯 하네요~ 이제 든든합니다.
 
@@ -120,7 +120,7 @@ controlplane $ kubectl scale deployment nginx-deployment --replicas=5
 deployment.apps/nginx-deployment scaled
 ```
 
-> **명령어** : `kubectl scale deployment nginx-deployment --replicas=5`{{exec}}
+> **명령어** : `kubectl scale deployment nginx-deployment --replicas=5`{{exec}}  
 
 조회결과도 보겠습니다.
 
@@ -143,7 +143,7 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-56cb9cc9db   5         5         5       2m42s
 ```
 
-> **명령어** : `kubectl get all`{{exec}}
+> **명령어** : `kubectl get all`{{exec}}  
 
 명령형 커맨드에서 지정한 대로 Pod의 개수가 다섯개가 되었습니다. 새롭게 생성된 두 개의 Pod를 볼 수 있습니다.
 
@@ -173,7 +173,7 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-56cb9cc9db   2         2         2       3m56s
 ```
 
-> **명령어** : `kubectl get all`{{exec}}
+> **명령어** : `kubectl get all`{{exec}}  
 
 ---
 
@@ -187,7 +187,7 @@ controlplane $ kubectl apply -f nginx-deployment.yaml
 deployment.apps/nginx-deployment configured
 ```
 
-> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}}
+> **명령어** : `kubectl apply -f nginx-deployment.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-deployment.yaml`{{exec}}
@@ -212,5 +212,5 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-56cb9cc9db   4         4         4       4m59s
 ```
 
-> **명령어** : `kubectl get all`{{exec}}
+> **명령어** : `kubectl get all`{{exec}}  
 

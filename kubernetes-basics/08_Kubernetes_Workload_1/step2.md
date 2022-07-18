@@ -39,7 +39,7 @@ controlplane $ kubectl apply -f livenessProbe_httpGet.yaml
 pod/liveness-http created
 ```
 
-> **명령어** : `kubectl apply -f livenessProbe_httpGet.yaml`{{exec}}
+> **명령어** : `kubectl apply -f livenessProbe_httpGet.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/livenessProbe_httpGet.yaml`{{exec}}
@@ -55,7 +55,7 @@ my-nginx2       1/1     Running   0             6m40s   192.168.1.5   node01   <
 my-nginx3       1/1     Running   0             119s    192.168.1.6   node01   <none>           <none>
 ```
 
-> **명령어** : `kubectl get pods -o wide`{{exec}}
+> **명령어** : `kubectl get pods -o wide`{{exec}}  
 
 테스트에 사용된 컨테이너는 libenessProbe 테스트를 위해서 생성 후 10초가 지난 뒤부터는 httpGet 요청에 대해서 500 Error를 발생하도록 되어있습니다.  
 ([소스코드](https://github.com/kubernetes/kubernetes/blob/master/test/images/agnhost/liveness/server.go) 참고)
@@ -77,5 +77,5 @@ pod "my-nginx2" deleted
 pod "my-nginx3" deleted
 ```
 
-> **명령어** : `kubectl delete pod --all`{{exec}}
+> **명령어** : `kubectl delete pod --all`{{exec}}  
 

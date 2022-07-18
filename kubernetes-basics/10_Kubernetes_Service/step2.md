@@ -28,7 +28,7 @@ controlplane $ kubectl apply -f nginx-clusterip-service.yaml
 service/nginx-clusterip-service created
 ```
 
-> **명령어** : `kubectl apply -f nginx-clusterip-service.yaml`{{exec}}
+> **명령어** : `kubectl apply -f nginx-clusterip-service.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-clusterip-service.yaml`{{exec}}
@@ -44,7 +44,7 @@ kubernetes                ClusterIP   10.96.0.1      <none>        443/TCP   70d
 nginx-clusterip-service   ClusterIP   10.106.200.8   <none>        80/TCP    80s
 ```
 
-> **명령어** : `kubectl get services`{{exec}}
+> **명령어** : `kubectl get services`{{exec}}  
 
 생성된 Service의 **CLUSTER-IP**가 보이시나요?
 이 아이피로 Pod까지 접근할 수도 있습니다.
@@ -78,7 +78,7 @@ Commercial support is available at
 </html>
 ```
 
-> **명령어** : `kubectl exec -it curlpod -- curl http://[SVC_IP]`{{copy}}
+> **명령어** : `kubectl exec -it curlpod -- curl http://[SVC_IP]`{{copy}}  
 > [SVC_IP]는 Service의 CLUSTER-IP
 
 ---
@@ -115,7 +115,7 @@ Commercial support is available at
 </html>
 ```
 
-> **명령어** : `kubectl exec -it curlpod -- curl [SVC_NAME]`{{copy}}
+> **명령어** : `kubectl exec -it curlpod -- curl [SVC_NAME]`{{copy}}  
 > [SVC_NAME] 는 Service의 NAME
 
 잘 되네요...

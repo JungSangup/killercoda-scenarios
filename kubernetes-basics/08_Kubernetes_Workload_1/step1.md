@@ -10,7 +10,7 @@ controlplane $ kubectl run my-nginx1 --image=nginx:1.19.3
 pod/my-nginx1 created
 ```
 
-> **명령어** : `kubectl run my-nginx1 --image=nginx:1.19.3`{{exec}}
+> **명령어** : `kubectl run my-nginx1 --image=nginx:1.19.3`{{exec}}  
 
 생성된 Pod를 볼까요?
 
@@ -55,7 +55,7 @@ controlplane $ kubectl create -f nginx2-pod.yaml
 pod/my-nginx2 created
 ```
 
-> **명령어** : `kubectl create -f nginx2-pod.yaml`{{exec}}
+> **명령어** : `kubectl create -f nginx2-pod.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl create -f ~/lab/nginx2-pod.yaml`{{exec}}
@@ -71,7 +71,7 @@ my-nginx1   1/1     Running   0          96s   192.168.1.4   node01   <none>    
 my-nginx2   1/1     Running   0          23s   192.168.1.5   node01   <none>           <none>
 ```
 
-> **명령어** : `kubectl get pods -o wide`{{exec}}
+> **명령어** : `kubectl get pods -o wide`{{exec}}  
 
 두 번째 Nginx Pod가 생성된 걸 볼 수 있습니다.
 첫 번째와 다른 명령어를 사용하였지만, 결과는 동일한 걸 알 수 있습니다.
@@ -110,7 +110,7 @@ controlplane $ kubectl apply -f nginx3-pod.yaml
 pod/my-nginx3 created
 ```
 
-> **명령어** : `kubectl apply -f nginx3-pod.yaml`{{exec}}
+> **명령어** : `kubectl apply -f nginx3-pod.yaml`{{exec}}  
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx3-pod.yaml`{{exec}}
@@ -127,7 +127,7 @@ my-nginx2   1/1     Running   0          5m3s    192.168.1.5   node01   <none>  
 my-nginx3   1/1     Running   0          22s     192.168.1.6   node01   <none>           <none>
 ```
 
-> **명령어** : `kubectl get pods -o wide`{{exec}}
+> **명령어** : `kubectl get pods -o wide`{{exec}}  
 
 역시 동일한 결과를 얻을 수 있습니다.
 
