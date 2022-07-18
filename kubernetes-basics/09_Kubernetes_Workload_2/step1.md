@@ -48,7 +48,7 @@ replicaset.apps/nginx-replicaset created
 ```
 
 > **명령어** : `kubectl apply -f nginx-replicaset.yaml`{{exec}}  
->   
+
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-replicaset.yaml`{{exec}}
 
@@ -124,6 +124,6 @@ replicaset.apps "nginx-replicaset" deleted
 ```
 
 > **명령어** : `kubectl delete -f nginx-replicaset.yaml`{{exec}}  
->   
+
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl delete -f ~/lab/nginx-replicaset.yaml`{{exec}}

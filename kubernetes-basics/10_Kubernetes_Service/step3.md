@@ -39,7 +39,7 @@ nginx-nodeport-service    NodePort    10.97.15.144   <none>        80:30007/TCP 
 ```
 
 > **명령어** : `kubectl apply -f nginx-nodeport-service.yaml`{{exec}} , `kubectl get services`{{exec}}  
->   
+
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-nodeport-service.yaml`{{exec}} , `kubectl get services`{{exec}}
 

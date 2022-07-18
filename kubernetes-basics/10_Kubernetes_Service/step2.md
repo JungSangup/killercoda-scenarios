@@ -29,7 +29,7 @@ service/nginx-clusterip-service created
 ```
 
 > **명령어** : `kubectl apply -f nginx-clusterip-service.yaml`{{exec}}  
->   
+
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-clusterip-service.yaml`{{exec}}
 
