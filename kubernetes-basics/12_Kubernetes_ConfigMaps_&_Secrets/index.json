@@ -21,7 +21,9 @@
         "host01": [
             {"file": "app.properties", "target": "~/lab"},
             {"file": "yaml-config.yaml", "target": "~/lab"},
-            {"file": "yaml-secret.yaml", "target": "~/lab"}
+            {"file": "configmappod.yaml", "target": "~/lab"},
+            {"file": "yaml-secret.yaml", "target": "~/lab"},
+            {"file": "secretpod.yaml", "target": "~/lab"}
         ]
     }
   },
