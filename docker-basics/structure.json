@@ -31,6 +31,11 @@
       "path": "06_Dockerfile",
       "title": "06. Dockerfile",
       "description": "Dockerfile 실습"
+    },
+    {
+      "path": "Docker_Playground",
+      "title": "٩(ˊᗜˋ*)و Docker playground",
+      "description": "Docker 놀이터"
     }
   ]
 }

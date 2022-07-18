@@ -46,6 +46,11 @@
       "path": "15_Helm",
       "title": "15. Helm",
       "description": "Helm 명령어 및 기본구조 학습"
+    },
+    {
+      "path": "Kubernetes_Playground",
+      "title": "٩(ˊᗜˋ*)و Kubernetes playground",
+      "description": "Kubernetes 놀이터"
     }
   ]
 }
