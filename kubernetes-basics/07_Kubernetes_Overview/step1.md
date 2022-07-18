@@ -2,7 +2,7 @@
 제일먼저 도움말을 볼까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl --help
+controlplane $ kubectl --help
 kubectl controls the Kubernetes cluster manager.
 
  Find more information at: https://kubernetes.io/docs/reference/kubectl/overview/
@@ -37,7 +37,7 @@ Use "kubectl options" for a list of global command-line options (applies to all 
 버젼을 알아보려면,
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl version
+controlplane $ kubectl version
 Client Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:25:17Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
 Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCommit:"816c97ab8cff8a1c72eccca1026f7820e93e0d25", GitTreeState:"clean", BuildDate:"2022-01-25T21:19:12Z", GoVersion:"go1.17.6", Compiler:"gc", Platform:"linux/amd64"}
 ```
@@ -47,9 +47,9 @@ Server Version: version.Info{Major:"1", Minor:"23", GitVersion:"v1.23.3", GitCom
 쿠버네티스 클러스터 정보를 확인하려면,
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl cluster-info
-Kubernetes control plane is running at https://192.168.49.2:8443
-CoreDNS is running at https://192.168.49.2:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+controlplane $ kubectl cluster-info
+Kubernetes control plane is running at https://172.30.1.2:6443
+CoreDNS is running at https://172.30.1.2:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 ```
@@ -59,9 +59,10 @@ To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 우리 클러스터의 노드목록은 아래 명령어로 알아볼 수 있습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get nodes
-NAME       STATUS   ROLES                  AGE     VERSION
-minikube   Ready    control-plane,master   4d23h   v1.23.3
+controlplane $ kubectl get nodes
+NAME           STATUS   ROLES           AGE   VERSION
+controlplane   Ready    control-plane   70d   v1.24.0
+node01         Ready    <none>          70d   v1.24.0
 ```
 
 > **명령어** : `kubectl get nodes`{{exec}}
@@ -71,9 +72,10 @@ minikube   Ready    control-plane,master   4d23h   v1.23.3
 `--output wide`옵션(또는, `-o wide`)을 주면 더 많은 정보를 보여줍니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get nodes --output wide
-NAME       STATUS   ROLES                  AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
-minikube   Ready    control-plane,master   4d23h   v1.23.3   192.168.49.2   <none>        Ubuntu 20.04.2 LTS   5.15.0-1013-aws   docker://20.10.12
+controlplane $ kubectl get nodes --output wide
+NAME           STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION     CONTAINER-RUNTIME
+controlplane   Ready    control-plane   70d   v1.24.0   172.30.1.2    <none>        Ubuntu 20.04.3 LTS   5.4.0-88-generic   containerd://1.5.9
+node01         Ready    <none>          70d   v1.24.0   172.30.2.2    <none>        Ubuntu 20.04.3 LTS   5.4.0-88-generic   containerd://1.5.9
 ```
 
 > **명령어** : `kubectl get nodes --output wide`{{exec}}
@@ -83,7 +85,7 @@ help와 유사하게 쿠버네티스 리소스들의 정의와 설명을 보려�
 예를들어 POD에 대해 알아보려면 아래와 같이 실행하면 됩니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl explain pod
+controlplane $ kubectl explain pod
 KIND:     Pod
 VERSION:  v1
 
@@ -109,7 +111,7 @@ FIELDS:
 먼저 현재 존재하는 POD 목록은 아래와 같이 조회합니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get pods
+controlplane $ kubectl get pods
 No resources found in default namespace.
 ```
 
@@ -124,13 +126,12 @@ No resources found in default namespace.
 네임스페이스를 보려면 아래 명령어를 사용하면 됩니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get namespaces
-NAME                   STATUS   AGE
-default                Active   4d23h
-kube-node-lease        Active   4d23h
-kube-public            Active   4d23h
-kube-system            Active   4d23h
-kubernetes-dashboard   Active   4d23h
+controlplane $ kubectl get namespaces
+NAME              STATUS   AGE
+default           Active   70d
+kube-node-lease   Active   70d
+kube-public       Active   70d
+kube-system       Active   70d
 ```
 
 > **명령어** : `kubectl get namespaces`{{exec}}
@@ -140,17 +141,19 @@ kubernetes-dashboard   Active   4d23h
 이번에는 Pod목록을 조회하는데, --all-namespaces옵션을 추가해볼까요?
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get pods --all-namespaces --output wide
-NAMESPACE              NAME                                        READY   STATUS    RESTARTS       AGE     IP             NODE       NOMINATED NODE   READINESS GATES
-kube-system            coredns-64897985d-hkjv2                     1/1     Running   5 (21m ago)    4d23h   172.17.0.2     minikube   <none>           <none>
-kube-system            etcd-minikube                               1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-system            kube-apiserver-minikube                     1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-system            kube-controller-manager-minikube            1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-system            kube-proxy-nhkrh                            1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-system            kube-scheduler-minikube                     1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-system            storage-provisioner                         1/1     Running   11 (20m ago)   4d23h   192.168.49.2   minikube   <none>           <none>
-kubernetes-dashboard   dashboard-metrics-scraper-58549894f-7gj7g   1/1     Running   5 (10h ago)    4d23h   172.17.0.4     minikube   <none>           <none>
-kubernetes-dashboard   kubernetes-dashboard-ccd587f44-9pqvf        1/1     Running   9 (20m ago)    4d23h   172.17.0.3     minikube   <none>           <none>
+controlplane $ kubectl get pods --all-namespaces --output wide
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS      AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+kube-system   calico-kube-controllers-54589b89dc-kfbb5   1/1     Running   0             70d   192.168.1.3   node01         <none>           <none>
+kube-system   canal-6p28v                                2/2     Running   1 (13m ago)   70d   172.30.2.2    node01         <none>           <none>
+kube-system   canal-8hb2n                                2/2     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+kube-system   coredns-7f6d6547b-2rgsz                    1/1     Running   0             70d   192.168.1.2   node01         <none>           <none>
+kube-system   coredns-7f6d6547b-rjr4g                    1/1     Running   0             70d   192.168.0.5   controlplane   <none>           <none>
+kube-system   etcd-controlplane                          1/1     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+kube-system   kube-apiserver-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
+kube-system   kube-controller-manager-controlplane       1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
+kube-system   kube-proxy-vllmz                           1/1     Running   0             70d   172.30.2.2    node01         <none>           <none>
+kube-system   kube-proxy-xskb9                           1/1     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+kube-system   kube-scheduler-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
 ```
 
 > **명령어** : `kubectl get pods --all-namespaces --output wide`{{exec}}
@@ -158,15 +161,19 @@ kubernetes-dashboard   kubernetes-dashboard-ccd587f44-9pqvf        1/1     Runni
 시스템이 사용하는 Pod들을 보려면 kube-system 네임스페이스를 보면 됩니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get pods --namespace kube-system --output wide
-NAME                               READY   STATUS    RESTARTS       AGE     IP             NODE       NOMINATED NODE   READINESS GATES
-coredns-64897985d-hkjv2            1/1     Running   5 (22m ago)    4d23h   172.17.0.2     minikube   <none>           <none>
-etcd-minikube                      1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-apiserver-minikube            1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-controller-manager-minikube   1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-proxy-nhkrh                   1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-kube-scheduler-minikube            1/1     Running   5 (10h ago)    4d23h   192.168.49.2   minikube   <none>           <none>
-storage-provisioner                1/1     Running   11 (21m ago)   4d23h   192.168.49.2   minikube   <none>           <none>
+controlplane $ kubectl get pods --namespace kube-system --output wide
+NAME                                       READY   STATUS    RESTARTS      AGE   IP            NODE           NOMINATED NODE   READINESS GATES
+calico-kube-controllers-54589b89dc-kfbb5   1/1     Running   0             70d   192.168.1.3   node01         <none>           <none>
+canal-6p28v                                2/2     Running   1 (14m ago)   70d   172.30.2.2    node01         <none>           <none>
+canal-8hb2n                                2/2     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+coredns-7f6d6547b-2rgsz                    1/1     Running   0             70d   192.168.1.2   node01         <none>           <none>
+coredns-7f6d6547b-rjr4g                    1/1     Running   0             70d   192.168.0.5   controlplane   <none>           <none>
+etcd-controlplane                          1/1     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+kube-apiserver-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
+kube-controller-manager-controlplane       1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
+kube-proxy-vllmz                           1/1     Running   0             70d   172.30.2.2    node01         <none>           <none>
+kube-proxy-xskb9                           1/1     Running   0             70d   172.30.1.2    controlplane   <none>           <none>
+kube-scheduler-controlplane                1/1     Running   2             70d   172.30.1.2    controlplane   <none>           <none>
 ```
 
 > **명령어** : `kubectl get pods --namespace kube-system --output wide`{{exec}}
@@ -177,91 +184,98 @@ storage-provisioner                1/1     Running   11 (21m ago)   4d23h   192.
 정보를 yaml형태로 볼 수 도 있구요.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl get pod kube-scheduler-minikube --namespace kube-system --output yaml
+controlplane $ kubectl get pod kube-scheduler-controlplane --namespace kube-system --output yaml
 apiVersion: v1
 kind: Pod
 metadata:
   annotations:
-    kubernetes.io/config.hash: be132fe5c6572cb34d93f5e05ce2a540
-    kubernetes.io/config.mirror: be132fe5c6572cb34d93f5e05ce2a540
-    kubernetes.io/config.seen: "2022-06-28T03:00:51.759906088Z"
+    kubernetes.io/config.hash: 6cf82a20eaca89f94f02af803510cf74
+    kubernetes.io/config.mirror: 6cf82a20eaca89f94f02af803510cf74
+    kubernetes.io/config.seen: "2022-05-08T19:33:37.832380102Z"
     kubernetes.io/config.source: file
     seccomp.security.alpha.kubernetes.io/pod: runtime/default
-  creationTimestamp: "2022-06-28T03:00:59Z"
+  creationTimestamp: "2022-05-08T19:34:08Z"
   labels:
     component: kube-scheduler
     tier: control-plane
-  name: kube-scheduler-minikube
+  name: kube-scheduler-controlplane
   namespace: kube-system
   ownerReferences:
   - apiVersion: v1
     controller: true
     kind: Node
-    name: minikube
-    uid: 62972b18-7ace-41ed-8101-1e799dc7039b
-  resourceVersion: "107807"
-  uid: 496eb351-e550-47d7-b681-1c1a4db07ee2
+    name: controlplane
+    uid: 3f64b139-f902-4afe-ad6a-548a52b64313
+  resourceVersion: "1085"
+  uid: 64f9e859-1683-409f-8e5a-d38bbe169a65
+spec:
+  containers:
   ... 생략 ...
 ```
 
-> **명령어** : `kubectl get pod kube-scheduler-minikube --namespace kube-system --output yaml`{{exec}}
+> **명령어** : `kubectl get pod kube-scheduler-controlplane --namespace kube-system --output yaml`{{exec}}
 
 ---
 
 describe명령으로 자세한 정보를 조회할 수도 있습니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl describe pod kube-scheduler-minikube --namespace kube-system
-Name:                 kube-scheduler-minikube
+controlplane $ kubectl describe pod kube-scheduler-controlplane --namespace kube-system
+Name:                 kube-scheduler-controlplane
 Namespace:            kube-system
 Priority:             2000001000
 Priority Class Name:  system-node-critical
-Node:                 minikube/192.168.49.2
-Start Time:           Sun, 03 Jul 2022 02:26:05 +0000
+Node:                 controlplane/172.30.1.2
+Start Time:           Sun, 08 May 2022 19:32:32 +0000
 Labels:               component=kube-scheduler
                       tier=control-plane
-Annotations:          kubernetes.io/config.hash: be132fe5c6572cb34d93f5e05ce2a540
-                      kubernetes.io/config.mirror: be132fe5c6572cb34d93f5e05ce2a540
-                      kubernetes.io/config.seen: 2022-06-28T03:00:51.759906088Z
+Annotations:          kubernetes.io/config.hash: 6cf82a20eaca89f94f02af803510cf74
+                      kubernetes.io/config.mirror: 6cf82a20eaca89f94f02af803510cf74
+                      kubernetes.io/config.seen: 2022-05-08T19:33:37.832380102Z
                       kubernetes.io/config.source: file
                       seccomp.security.alpha.kubernetes.io/pod: runtime/default
 Status:               Running
-IP:                   192.168.49.2
+IP:                   172.30.1.2
 IPs:
-  IP:           192.168.49.2
-Controlled By:  Node/minikube
+  IP:           172.30.1.2
+Controlled By:  Node/controlplane
 Containers:
   kube-scheduler:
-    Container ID:  docker://611f03eee9bda2543f503017e1e6a93ac784eefc22bfb6a86a6407a54fdc0e13
-    Image:         k8s.gcr.io/kube-scheduler:v1.23.3
-    Image ID:      docker-pullable://k8s.gcr.io/kube-scheduler@sha256:32308abe86f7415611ca86ee79dd0a73e74ebecb2f9e3eb85fc3a8e62f03d0e7
+    Container ID:  containerd://da924d974bcde2110e676b2e8281971fc6de20b51b3dd59c9cc64ad7143008d8
+    Image:         k8s.gcr.io/kube-scheduler:v1.24.0
+    Image ID:      k8s.gcr.io/kube-scheduler@sha256:db842a7c431fd51db7e1911f6d1df27a7b6b6963ceda24852b654d2cd535b776
     Port:          <none>
     Host Port:     <none>
     ... 생략 ...
 ```
 
-> **명령어** : `kubectl describe pod kube-scheduler-minikube --namespace kube-system`{{exec}}
+> **명령어** : `kubectl describe pod kube-scheduler-controlplane --namespace kube-system`{{exec}}
 
 ---
 
 Pod의 로그를 보려면 아래와 같이 하시면 됩니다.
 
 ```bash
-ubuntu@ip-10-0-1-14:~$ kubectl logs -n kube-system kube-scheduler-minikube
-I0703 02:26:09.300292       1 serving.go:348] Generated self-signed cert in-memory
-W0703 02:26:09.824641       1 authentication.go:345] Error looking up in-cluster authentication configuration: Get "https://192.168.49.2:8443/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication": dial tcp 192.168.49.2:8443: connect: connection refused
-W0703 02:26:09.824698       1 authentication.go:346] Continuing without authentication configuration. This may treat all requests as anonymous.
-W0703 02:26:09.824710       1 authentication.go:347] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
-I0703 02:26:09.920711       1 server.go:139] "Starting Kubernetes Scheduler" version="v1.23.3"
-I0703 02:26:09.941545       1 configmap_cafile_content.go:201] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
-I0703 02:26:09.941603       1 secure_serving.go:200] Serving securely on 127.0.0.1:10259
-I0703 02:26:09.941631       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
-I0703 02:26:09.952426       1 shared_informer.go:240] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+controlplane $ kubectl logs -n kube-system kube-scheduler-controlplane
+I0718 04:28:50.141123       1 serving.go:348] Generated self-signed cert in-memory
+W0718 04:28:53.900885       1 requestheader_controller.go:193] Unable to get configmap/extension-apiserver-authentication in kube-system.  Usually fixed by 'kubectl create rolebinding -n kube-system ROLEBINDING_NAME --role=extension-apiserver-authentication-reader --serviceaccount=YOUR_NS:YOUR_SA'
+W0718 04:28:53.900918       1 authentication.go:346] Error looking up in-cluster authentication configuration: configmaps "extension-apiserver-authentication" is forbidden: User "system:kube-scheduler" cannot get resource "configmaps" in API group "" in the namespace "kube-system"
+W0718 04:28:53.900925       1 authentication.go:347] Continuing without authentication configuration. This may treat all requests as anonymous.
+W0718 04:28:53.900930       1 authentication.go:348] To require authentication configuration lookup to succeed, set --authentication-tolerate-lookup-failure=false
+I0718 04:28:54.058506       1 server.go:147] "Starting Kubernetes Scheduler" version="v1.24.0"
+I0718 04:28:54.058525       1 server.go:149] "Golang settings" GOGC="" GOMAXPROCS="" GOTRACEBACK=""
+I0718 04:28:54.059449       1 secure_serving.go:210] Serving securely on 127.0.0.1:10259
+I0718 04:28:54.059518       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+I0718 04:28:54.059530       1 shared_informer.go:255] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+I0718 04:28:54.059540       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+W0718 04:28:54.127434       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+E0718 04:28:54.127465       1 reflector.go:138] vendor/k8s.io/client-go/informers/factory.go:134: Failed to watch *v1.Namespace: failed to list *v1.Namespace: namespaces is forbidden: User "system:kube-scheduler" cannot list resource "namespaces" in API group "" at the cluster scope
+W0718 04:28:54.127556       1 reflector.go:324] vendor/k8s.io/client-go/informers/factory.go:134: failed to list *v1.StorageClass: storageclasses.storage.k8s.io is forbidden: User "system:kube-scheduler" cannot list resource "storageclasses" in API group "storage.k8s.io" at the cluster scope
 
 ... 생략 ...
 ```
 
-> **명령어** : `kubectl logs -n kube-system kube-scheduler-minikube`{{exec}}
+> **명령어** : `kubectl logs -n kube-system kube-scheduler-controlplane`{{exec}}
 
 <br>
 
