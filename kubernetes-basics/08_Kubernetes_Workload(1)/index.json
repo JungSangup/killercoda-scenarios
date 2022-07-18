@@ -11,12 +11,18 @@
 		  {
 		    "title": "Step 1 - 여러가지 방법으로 Pod 생성하기",
 		    "text": "step1.md"
+		  },
+      {
+		    "title": "Step 2 - liveness probe 사용 해보기",
+		    "text": "step2.md"
 		  }
 	  ],
     "assets": {
         "host01": [
             {"file": "nginx2-pod.yaml", "target": "~/lab"},
-            {"file": "nginx3-pod.yaml", "target": "~/lab"}
+            {"file": "nginx3-pod.yaml", "target": "~/lab"},
+            {"file": "livenessProbe_httpGet", "target": "~/lab"},
+            {"file": "livenessProbe_tcpSocket", "target": "~/lab"}
         ]
     }
   },
