@@ -44,7 +44,7 @@ SVRTZXJ2aWNl
 작성된 yaml을 적용하겠습니다.
 
 ```bash
-ubuntu@ip-10-0-1-161:~$ kubectl apply -f yaml-secret.yaml
+controlplane $ kubectl apply -f yaml-secret.yaml
 secret/yaml-secret created
 ```
 

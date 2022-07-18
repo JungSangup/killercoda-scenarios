@@ -85,7 +85,7 @@ configmap/file-config created
 다음으로 --from-env-file 을 사용하여 file-env-config 라는 이름의 configmap을 만듭니다.
 
 ```bash
-ubuntu@ip-10-0-1-161:~$ kubectl create configmap file-env-config --from-env-file=./app.properties
+controlplane $ kubectl create configmap file-env-config --from-env-file=./app.properties
 configmap/file-env-config created
 ```
 
