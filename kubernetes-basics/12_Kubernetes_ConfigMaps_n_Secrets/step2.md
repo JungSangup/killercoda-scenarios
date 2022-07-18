@@ -48,7 +48,7 @@ ubuntu@ip-10-0-1-161:~$ kubectl apply -f yaml-secret.yaml
 secret/yaml-secret created
 ```
 
-> **명령어** : `kubectl apply -f yaml-secret.yaml`
+> **명령어** : `kubectl apply -f yaml-secret.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어(Tab 1)** : `kubectl apply -f ~/lab/yaml-secret.yaml`{{exec}}
@@ -73,7 +73,7 @@ business:  9 bytes
 location:  6 bytes
 ```
 
-> **명령어** : `kubectl describe secret yaml-secret`
+> **명령어** : `kubectl describe secret yaml-secret`{{exec}}
 
 ---
 
@@ -118,7 +118,7 @@ controlplane $ kubectl apply -f secretpod.yaml
 pod/secret-pod created
 ```
 
-> **명령어** : `kubectl apply -f secretpod.yaml`
+> **명령어** : `kubectl apply -f secretpod.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어(Tab 1)** : `kubectl apply -f ~/lab/secretpod.yaml`{{exec}}
@@ -145,6 +145,6 @@ TERM=xterm
 HOME=/root
 ```
 
-> **명령어** : `kubectl exec -it secret-pod -- env`
+> **명령어** : `kubectl exec -it secret-pod -- env`{{exec}}
 
 이번 실습은 여기까지 입니다.   ＿〆(。╹‿ ╹ 。)

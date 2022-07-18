@@ -185,7 +185,7 @@ controlplane $ kubectl apply -f yaml-config.yaml
 configmap/yaml-config created
 ```
 
-> **명령어** : `kubectl apply -f yaml-config.yaml`
+> **명령어** : `kubectl apply -f yaml-config.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어(Tab 1)** : `kubectl apply -f ~/lab/yaml-config.yaml`{{exec}}
@@ -216,7 +216,7 @@ BinaryData
 Events:  <none>
 ```
 
-> **명령어** : `kubectl describe configmaps yaml-config`
+> **명령어** : `kubectl describe configmaps yaml-config`{{exec}}
 
 yaml파일에 작성한 key-value 쌍이 data로 생성되어 있습니다.
 
@@ -282,7 +282,7 @@ controlplane $ kubectl apply -f configmappod.yaml
 pod/configmap-pod created
 ```
 
-> **명령어** : `kubectl apply -f configmappod.yaml`
+> **명령어** : `kubectl apply -f configmappod.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어(Tab 1)** : `kubectl apply -f ~/lab/configmappod.yaml`{{exec}}
@@ -291,7 +291,7 @@ pod/configmap-pod created
 
 해당 pod의 환경변수에 어떤 값들이 들어갔는지 확인해 보겠습니다.
 
-```bash
+```bash{4-11}
 controlplane $ kubectl exec -it configmap-pod -- env
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HOSTNAME=configmap-pod
@@ -315,7 +315,7 @@ TERM=xterm
 HOME=/root
 ```
 
-> **명령어** : `kubectl exec -it configmap-pod -- env`
+> **명령어** : `kubectl exec -it configmap-pod -- env`{{exec}}
 
 ---
 
@@ -331,4 +331,4 @@ database.user=hojoon
 database.password=elqlvotmdnjem
 ```
 
-> **명령어** : `kubectl exec -it configmap-pod -- cat /etc/config/app.properties`
+> **명령어** : `kubectl exec -it configmap-pod -- cat /etc/config/app.properties`{{exec}}
