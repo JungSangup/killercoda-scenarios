@@ -1,5 +1,5 @@
 {
-  "title": "08. Kubernetes Workload_1 - Pod",
+  "title": "08. Kubernetes Workload(1) - Pod",
   "description": "Pod 관리 실습 (명령형/선언형)",
   "difficulty": "beginner",
   "time": "15 minutes",
@@ -20,7 +20,9 @@
     "assets": {
         "host01": [
             {"file": "nginx2-pod.yaml", "target": "~/lab"},
-            {"file": "nginx3-pod.yaml", "target": "~/lab"}
+            {"file": "nginx3-pod.yaml", "target": "~/lab"},
+            {"file": "livenessProbe_httpGet.yaml", "target": "~/lab"},
+            {"file": "livenessProbe_tcpSocket.yaml", "target": "~/lab"}
         ]
     }
   },
