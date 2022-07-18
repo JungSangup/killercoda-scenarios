@@ -28,7 +28,7 @@
       "description": "Recreate/RollingUpdate 실습"
     },
     {
-      "path": "12_Kubernetes_ConfigMaps_&_Secrets",
+      "path": "12_Kubernetes_ConfigMaps_n_Secrets",
       "title": "12. Kubernetes ConfigMaps & Secrets",
       "description": "ConfigMap, Secret 생성 및 사용 실습"
     },
