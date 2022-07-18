@@ -47,7 +47,7 @@ controlplane $ kubectl apply -f nginx-replicaset.yaml
 replicaset.apps/nginx-replicaset created
 ```
 
-> **명령어** : `kubectl apply -f nginx-replicaset.yaml`
+> **명령어** : `kubectl apply -f nginx-replicaset.yaml`{{exec}}
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl apply -f ~/lab/nginx-replicaset.yaml`{{exec}}
@@ -60,7 +60,7 @@ NAME               DESIRED   CURRENT   READY   AGE   CONTAINERS   IMAGES        
 nginx-replicaset   3         3         3       23s   my-nginx     nginx:1.19.3   app=my-nginx
 ```
 
-> **명령어** : `kubectl get replicasets -o wide`
+> **명령어** : `kubectl get replicasets -o wide`{{exec}}
 
 ---
 
@@ -94,7 +94,7 @@ Events:
   Normal  SuccessfulCreate  41s   replicaset-controller  Created pod: nginx-replicaset-qlsmk
 ```
 
-> **명령어** : `kubectl describe replicasets nginx-replicaset`
+> **명령어** : `kubectl describe replicasets nginx-replicaset`{{exec}}
 
 ---
 
@@ -111,7 +111,7 @@ nginx-replicaset-mm2pd   1/1     Running   0          64s   app=my-nginx
 nginx-replicaset-qlsmk   1/1     Running   0          64s   app=my-nginx
 ```
 
-> **명령어** : `kubectl get pods --show-labels`
+> **명령어** : `kubectl get pods --show-labels`{{exec}}
 
 이제 뭔가 좀 자동으로 돌아가는 모양새가 나오네요~
 
@@ -123,7 +123,7 @@ controlplane $ kubectl delete -f nginx-replicaset.yaml
 replicaset.apps "nginx-replicaset" deleted
 ```
 
-> **명령어** : `kubectl delete -f nginx-replicaset.yaml`
+> **명령어** : `kubectl delete -f nginx-replicaset.yaml`{{exec}}
 >   
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
 > **명령어** : `kubectl delete -f ~/lab/nginx-replicaset.yaml`{{exec}}
