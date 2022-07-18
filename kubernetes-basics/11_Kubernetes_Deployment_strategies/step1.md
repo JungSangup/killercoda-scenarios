@@ -62,10 +62,10 @@ controlplane $ kubectl apply -f nginx-recreate.yaml
 deployment.apps/nginx-deployment created
 ```
 
-> **명령어** : `kubectl apply -f nginx-recreate.yaml`{{exec T1}}
+> **명령어** : `kubectl apply -f nginx-recreate.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
-> **명령어** : `kubectl apply -f ~/lab/nginx-recreate.yaml`{{exec T1}}
+> **명령어** : `kubectl apply -f ~/lab/nginx-recreate.yaml`{{exec}}
 
 그리고, 생성된 Object들도 확인해 보겠습니다.
 
@@ -86,7 +86,7 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-5777d8dcc8   3         3         3       31s
 ```
 
-> **명령어** : `kubectl get all`{{exec T1}}
+> **명령어** : `kubectl get all`{{exec}}
 
 Spec에 정의된 대로 세 개의 Nginx Pod가 생성되어 있습니다.
 
@@ -99,7 +99,7 @@ controlplane $ kubectl describe deployment nginx-deployment | grep -i image
     Image:        nginx:1.18
 ```
 
-> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec T1}}
+> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
 
 사용된 Image는 `nginx:1.18` 입니다.
 
@@ -114,7 +114,7 @@ yaml파일의 버젼부분을 수정합니다. (`image: nginx:1.18` -> `image: n
 controlplane $ sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-recreate.yaml
 ```
 
-> **명령어** : `sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-recreate.yaml`{{exec T1}}
+> **명령어** : `sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-recreate.yaml`{{exec}}
 
 
 
@@ -132,7 +132,7 @@ nginx-deployment-5777d8dcc8-sgtxr   1/1     Running   0          4m42s
 
 ```
 
-> **명령어** : `kubectl get pods --watch`{{exec T2}}  
+> **명령어** : `kubectl get pods --watch`{{exec}}  
 > `--watch` 는 앞의 명령어를 실행한 후 변경(Change)사항을 지속적으로 보여주는 Flag입니다.  
 > Watch를 멈추려면 Ctrl + c 를 입력합니다.
 
@@ -146,7 +146,7 @@ controlplane $ kubectl apply -f nginx-recreate.yaml
 deployment.apps/nginx-deployment configured
 ```
 
-> **명령어** : `kubectl apply -f nginx-recreate.yaml`{{exec T1}}
+> **명령어** : `kubectl apply -f nginx-recreate.yaml`{{exec}}
 
 ---
 
@@ -200,7 +200,7 @@ controlplane $ kubectl describe deployment nginx-deployment | grep -i image
     Image:        nginx:1.19
 ```
 
-> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec T1}}
+> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
 
 
 그리고, 새로 생성된 Pod도 한번 보구요.
@@ -235,7 +235,7 @@ REVISION  CHANGE-CAUSE
 2         <none>
 ```
 
-> **명령어** : `kubectl rollout history deployment nginx-deployment`{{exec T1}}
+> **명령어** : `kubectl rollout history deployment nginx-deployment`{{exec}}
 
 최초 생성된 **Revision #1**과 한 번 업데이트 후의 **Revision #2**가 보입니다.  
 그 중 하나의 Revision을 콕 집어서 자세히 볼 수도 있습니다.
@@ -256,7 +256,7 @@ Pod Template:
   Volumes:      <none>
 ```
 
-> **명령어** : `kubectl rollout history deployment nginx-deployment --revision=1`{{exec T1}}
+> **명령어** : `kubectl rollout history deployment nginx-deployment --revision=1`{{exec}}
 
 ---
 
@@ -276,7 +276,7 @@ Pod Template:
   Volumes:      <none>
 ```
 
-> **명령어** : `kubectl rollout history deployment nginx-deployment --revision=2`{{exec T1}}
+> **명령어** : `kubectl rollout history deployment nginx-deployment --revision=2`{{exec}}
 
 
 
@@ -291,7 +291,7 @@ nginx-deployment-6866dc769c-kpc7w   1/1     Running   0          6m14s
 
 ```
 
-> **명령어** : `kubectl get pods --watch`{{exec T2}}  
+> **명령어** : `kubectl get pods --watch`{{exec}}  
 > `--watch` 는 앞의 명령어를 실행한 후 변경(Change)사항을 지속적으로 보여주는 Flag입니다.  
 > Watch를 멈추려면 Ctrl + c 를 입력합니다.
 
@@ -304,7 +304,7 @@ controlplane $ kubectl rollout undo deployment nginx-deployment --to-revision=1
 deployment.apps/nginx-deployment rolled back
 ```
 
-> **명령어** : `kubectl rollout undo deployment nginx-deployment --to-revision=1`{{exec T1}}
+> **명령어** : `kubectl rollout undo deployment nginx-deployment --to-revision=1`{{exec}}
 
 두 번째 터미널에는 업데이트 할 때와 비슷한 변경내용을 볼 수 있을겁니다.  
 Pod들을 먼저 삭제하고, 새로은 Pod들을 만드는 걸 볼 수 있습니다.
@@ -329,4 +329,4 @@ controlplane $ kubectl delete -f nginx-recreate.yaml
 deployment.apps "nginx-deployment" deleted
 ```
 
-> **명령어** : `kubectl delete -f nginx-recreate.yaml`{{exec T1}}
+> **명령어** : `kubectl delete -f nginx-recreate.yaml`{{exec}}
