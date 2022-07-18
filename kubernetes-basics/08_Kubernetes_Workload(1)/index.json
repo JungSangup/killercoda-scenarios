@@ -19,7 +19,8 @@
 	  ],
     "assets": {
         "host01": [
-            {"file": "HelloDocker.java", "target": "~/lab"}
+            {"file": "nginx2-pod.yaml", "target": "~/lab"},
+            {"file": "nginx3-pod.yaml", "target": "~/lab"}
         ]
     }
   },
