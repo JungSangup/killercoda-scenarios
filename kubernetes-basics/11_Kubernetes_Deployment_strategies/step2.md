@@ -55,10 +55,10 @@ controlplane $ kubectl apply -f nginx-rollingupdate.yaml
 deployment.apps/nginx-deployment created
 ```
 
-> **명령어** : `kubectl apply -f nginx-rollingupdate.yaml`{{exec}}
+> **명령어(Tab 1)** : `kubectl apply -f nginx-rollingupdate.yaml`{{exec}}
 
 > 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
-> **명령어** : `kubectl apply -f ~/lab/nginx-rollingupdate.yaml`{{exec}}
+> **명령어(Tab 1)** : `kubectl apply -f ~/lab/nginx-rollingupdate.yaml`{{exec}}
 
 
 그리고, 생성된 Object들도 확인해 보겠습니다.
@@ -80,7 +80,7 @@ NAME                                          DESIRED   CURRENT   READY   AGE
 replicaset.apps/nginx-deployment-5777d8dcc8   3         3         3       61s
 ```
 
-> **명령어** : `kubectl get all`{{exec}}
+> **명령어(Tab 1)** : `kubectl get all`{{exec}}
 
 ---
 
@@ -91,7 +91,7 @@ controlplane $ kubectl describe deployment nginx-deployment | grep -i image
     Image:        nginx:1.18
 ```
 
-> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
+> **명령어(Tab 1)** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
 
 사용된 Image는 `nginx:1.18` 입니다.
 
@@ -101,7 +101,10 @@ controlplane $ kubectl describe deployment nginx-deployment | grep -i image
 controlplane $ sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-rollingupdate.yaml
 ```
 
-> **명령어** : `sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-rollingupdate.yaml`{{exec}}
+> **명령어(Tab 1)** : `sed -i 's/image: nginx:1.18/image: nginx:1.19/g' nginx-rollingupdate.yaml`{{exec}}
+
+> 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
+> **명령어(Tab 1)** : `sed -i 's/image: nginx:1.18/image: nginx:1.19/g' ~/lab/nginx-rollingupdate.yaml`{{exec}}
 
 ---
 
@@ -116,7 +119,7 @@ nginx-deployment-5777d8dcc8-xr8pn   1/1     Running   0          4m24s
 
 ```
 
-> **명령어** : `kubectl get pods --watch`{{exec}}
+> **명령어(Tab 2)** : `kubectl get pods --watch`{{exec}}
 
 첫 번재 Terminal에서 업데이트를 합니다.
 
@@ -125,7 +128,10 @@ controlplane $ kubectl apply -f nginx-rollingupdate.yaml
 deployment.apps/nginx-deployment configured
 ```
 
-> **명령어** : `kubectl apply -f nginx-rollingupdate.yaml`{{exec}}
+> **명령어(Tab 1)** : `kubectl apply -f nginx-rollingupdate.yaml`{{exec}}
+
+> 또는 lab 디렉토리의 파일을 그대로 사용하려면 아래 명령어를 실행하세요.  
+> **명령어(Tab 1)** : `kubectl apply -f ~/lab/nginx-rollingupdate.yaml`{{exec}}
 
 ---
 
@@ -179,7 +185,7 @@ controlplane $ kubectl describe deployment nginx-deployment | grep -i image
     Image:        nginx:1.19
 ```
 
-> **명령어** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
+> **명령어(Tab 1)** : `kubectl describe deployment nginx-deployment | grep -i image`{{exec}}
 
 새로 생성된 Pod의 정보도 확인해봅니다.
 
@@ -190,16 +196,17 @@ controlplane $ kubectl describe pod nginx-deployment-6866dc769c-jstvj | grep -i 
   Normal  Pulled     108s  kubelet            Container image "nginx:1.19" already present on machine
 ```
 
-> **명령어** : `kubectl describe pod [POD-NAME] | grep -i image`{{copy T1}}  
+> **명령어(Tab 1)** : `kubectl describe pod [POD-NAME] | grep -i image`{{copy T1}}  
 > [POD-NAME] 에는 앞에서 조회된 POD 중 하나의 이름을 넣어주세요.
 
 앞에서와 마찬가지로 롤백도 해보세요.. 자세한 설명은 생략합니다.  
-`kubectl rollout history deployment nginx-deployment`{{exec}}
 
-`kubectl get pods --watch`{{exec}}
+> **명령어(Tab 1)** : `kubectl rollout history deployment nginx-deployment`{{exec}}
 
-`kubectl rollout undo deployment nginx-deployment --to-revision=1`{{exec}}
+> **명령어(Tab 2)** : `kubectl get pods --watch`{{exec}}
 
-`kubectl describe pod [POD-NAME] | grep -i image`{{exec}}
+> **명령어(Tab 1)** : `kubectl rollout undo deployment nginx-deployment --to-revision=1`{{exec}}
 
-`kubectl delete -f nginx-rollingupdate.yaml`{{exec}}
+> **명령어(Tab 1)** : `kubectl describe pod [POD-NAME] | grep -i image`{{exec}}
+
+> **명령어(Tab 1)** : `kubectl delete -f nginx-rollingupdate.yaml`{{exec}}
