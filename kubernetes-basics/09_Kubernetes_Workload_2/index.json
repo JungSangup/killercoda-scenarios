@@ -1,5 +1,5 @@
 {
-  "title": "09. Kubernetes Workload(2) - ReplicaSet, Deployment",
+  "title": "09. Kubernetes Workload_2 - ReplicaSet, Deployment",
   "description": "ReplicaSet, Deployment 관리 실습",
   "difficulty": "beginner",
   "time": "15 minutes",
