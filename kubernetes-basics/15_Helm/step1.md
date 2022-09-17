@@ -1,7 +1,7 @@
 
 먼저 helm client를 설치해볼까요?  
 Ubuntu에서는 다음과 같이 하면 됩니다.  
-`sudo apt-get update`{{execute}}
+`sudo apt-get update`{{execute}}  
 `sudo apt-get install helm`{{execute}}  
 
 이제 자주 사용되는 Helm 명령어들을 실습해 보겠습니다.
