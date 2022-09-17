@@ -4,7 +4,7 @@ Ubuntu에서는 다음과 같이 하면 됩니다.
 `sudo apt-get update`{{execute}}
 `sudo apt-get install helm`{{execute}}  
 
-자주 사용되는 Helm 명령어들을 실습해 보겠습니다.
+이제 자주 사용되는 Helm 명령어들을 실습해 보겠습니다.
 
 먼저 어떤 명령어들이 있는지 살펴볼까요?  
 `helm --help`{{execute}}
