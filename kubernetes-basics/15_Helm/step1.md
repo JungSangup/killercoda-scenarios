@@ -7,14 +7,12 @@
 
 이제 설치를 한 버 진행해볼까요?  
 먼저 Repository를 add해줍니다.  
-`helm repo add stable https://kubernetes-charts.storage.googleapis.com/`{{execute}}
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
 
 Repository 목록도 볼 수 있습니다.  
 `helm repo list`{{execute}}
 
 검색도 가능하구요.  
-`helm search repo stable`{{execute}}
 `helm search repo bitnami`{{execute}}
 
 Wordpress를 한 번 찾아볼까요?  
@@ -38,11 +36,11 @@ Release의 목록은 다음 명령으로 조회할 수 있구요.
 
 
 chart를 다운로드(pull)도 해볼게요.  
-`helm pull bitnami/wordpress --version 11.0.11`{{execute}}
+`helm pull bitnami/wordpress`{{execute}}
 
 tar로 받아지네요.  
 압축도 풀어볼까요?  
-`tar -xvf wordpress-11.0.11.tgz`{{execute}}
+`tar -xvf wordpress*.tgz`{{execute}}
 
 어떤 파일들이 있는지 한 번 살펴보겠습니다.  
 `cd wordpress`{{execute}}
