@@ -12,7 +12,12 @@
 		    "title": "Step 1 - Helm 기본 명령어 사용 해보기",
 		    "text": "step1.md"
 		  }
-	  ]
+	  ],
+    "assets": {
+        "host01": [
+            {"file": "helm", "target": "/usr/local/bin"}
+        ]
+    }
   },
   "backend": {
     "imageid": "kubernetes-kubeadm-2nodes"
