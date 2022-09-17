@@ -15,7 +15,7 @@
 	  ],
     "assets": {
         "host01": [
-            {"file": "helm", "target": "/usr/local/bin"}
+            {"file": "helm", "target": "/usr/local/bin", "chmod": "+x"}
         ]
     }
   },
