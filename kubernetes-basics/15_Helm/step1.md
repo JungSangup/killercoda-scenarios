@@ -43,7 +43,9 @@ tar로 받아지네요.
 `tar -xvf wordpress*.tgz`{{execute}}
 
 어떤 파일들이 있는지 한 번 살펴보겠습니다.  
-`tree ./wordpress`{{execute}}
+`cd wordpress`{{execute}}
+
+`ls -al`{{execute}}  
 
 
 여기까지 Helm 에 대해 알아보았습니다.
