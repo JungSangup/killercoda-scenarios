@@ -1,5 +1,5 @@
 {
-  "title": "11. Kubernetes Deployment strategies",
+  "title": "13. Kubernetes Deployment strategies",
   "description": "Recreate/RollingUpdate 실습",
   "difficulty": "beginner",
   "time": "15 minutes",

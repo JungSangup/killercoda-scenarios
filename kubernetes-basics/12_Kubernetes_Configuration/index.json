@@ -1,5 +1,5 @@
 {
-  "title": "12. Kubernetes ConfigMaps & Secrets",
+  "title": "12. Kubernetes Configuration",
   "description": "ConfigMap, Secret 생성 및 사용 실습",
   "difficulty": "beginner",
   "time": "10 minutes",

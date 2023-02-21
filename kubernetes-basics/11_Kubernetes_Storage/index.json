@@ -1,15 +1,15 @@
 {
-  "title": "13. Kubernetes Horizontal Pod Autoscaler",
-  "description": "Horizontal Pod Autoscaler(HPA) 사용 실습",
+  "title": "11. Kubernetes Storage",
+  "description": "PVC/PV 생성 및 사용 실습",
   "difficulty": "beginner",
-  "time": "15 minutes",
+  "time": "10 minutes",
   "details": {
     "intro": {
       "text": "intro.md"
     },    
     "steps": [
 		  {
-		    "title": "Step 1 - HPA 사용 해보기",
+		    "title": "Step 1 - PVC/PV 사용 해보기",
 		    "text": "step1.md"
 		  }
 	  ],
