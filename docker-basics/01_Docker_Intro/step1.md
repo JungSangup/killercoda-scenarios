@@ -5,6 +5,8 @@
 
 ![](./img/todo-list-sample1.png)
 
+![](img/todo-list-sample1.png)
+
 이번 과정에서 사용할 샘플 애플리케이션인 **ToDo List Manager** 입니다.  
 할 일 목록(Item)을 등록하고 관리할 수 있는 간단한 애플리케이션입니다.
 
@@ -24,6 +26,11 @@ Resolving deltas: 100% (4/4), done.
 ```
 
 > **명령어** : `git clone https://github.com/JungSangup/todo_list_manager.git app`{{exec}}
+
+> 💻 명령어
+>```bash
+>git clone https://github.com/JungSangup/todo_list_manager.git app
+>```{{exec}}
 
 소스코드 준비가 됐으면 `app` 디렉토리로 이동해서 어떤 파일들이 있는지 살펴볼까요?
 
