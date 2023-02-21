@@ -1,6 +1,8 @@
 {
   "items": [
     { "path": "t2-docker-basics", "title": "[T2] Docker Basics" },
-    { "path": "t2-kubernetes-basics", "title": "[T2] Kubernetes Basics" }
+    { "path": "t2-kubernetes-basics", "title": "[T2] Kubernetes Basics" },
+    { "path": "t3-docker-basics", "title": "[T3] Docker Basics" },
+    { "path": "t3-kubernetes-basics", "title": "[T3] Kubernetes Basics" }
   ]
 }
