@@ -1,5 +1,0 @@
-FROM openjdk:8
-COPY HelloDocker.java /hello/
-WORKDIR /hello
-RUN javac HelloDocker.java
-CMD ["java","HelloDocker"]
