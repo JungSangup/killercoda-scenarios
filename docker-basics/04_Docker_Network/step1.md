@@ -83,7 +83,9 @@ Status: Downloaded newer image for mysql:5.7
 b0cd02ef4766a2107e2404bc2c637c4a8b3088e4c1608151d6810122c287659c
 ```
 
-> 💻 명령어 `docker run -d \
+> 💻 명령어
+> ````
+>docker run -d \
 >    --network todo-app --network-alias mysql \
 >    --volume todo-mysql-data:/var/lib/mysql \
 >    --env MYSQL_ROOT_PASSWORD=secret \
@@ -92,7 +94,8 @@ b0cd02ef4766a2107e2404bc2c637c4a8b3088e4c1608151d6810122c287659c
 >    --name my-mysql \
 >    mysql:5.7 \
 >    --character-set-server=utf8mb4 \
->    --collation-server=utf8mb4_unicode_ci`{{exec}}
+>    --collation-server=utf8mb4_unicode_ci
+> ```{{exec}}
 
 이전에 배운 **volume**도 사용하네요.  
 데이터의 영속성을 위해서 데이터는 **volume(todo-mysql-data)**에 저장하도록 구성했습니다.  
@@ -173,14 +176,17 @@ ubuntu@ip-172-31-23-60:~$ docker run -dp 3000:3000 \
 1dce849ca625a5c4b4925a90fe0a08dc272cf904682b3554210b94d183f5dfd2
 ```
 
-> 💻 명령어 `docker run -dp 3000:3000 \
+> 💻 명령어 
+> ```
+>docker run -dp 3000:3000 \
 > --network todo-app \
 > --env MYSQL_HOST=mysql \
 > --env MYSQL_USER=root \
 > --env MYSQL_PASSWORD=secret \
 > --env MYSQL_DB=todos \
 > --name my-todo-manager \
->[USER-NAME]/todo-app:1.0.0`{{exec}}
+>[USER-NAME]/todo-app:1.0.0
+>```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 - **[USER-NAME]/todo-app:1.0.0** 이 준비가 안된 경우, **rogallo/101-todo-app:1.0.0**을 이용해주세요. login 없이 사용가능한 public repository의 이미지입니다.
 
