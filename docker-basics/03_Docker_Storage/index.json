@@ -9,11 +9,11 @@
     },    
     "steps": [
 		  {
-		    "title": "Step 1 - Layer 개념 확인하기",
+		    "title": "Step 1 - Container layer (R/W layer)",
 		    "text": "step1.md"
 		  },
 		  {
-		    "title": "Step 2 - Volume 사용 해보기",
+		    "title": "Step 2 - Volume을 이용하여 Todo app. 실행하기",
 		    "text": "step2.md"
 		  }
 	  ]
