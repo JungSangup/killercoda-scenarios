@@ -164,7 +164,8 @@ ubuntu는 **Exited** 상태이고, nginx는 **Running** 상태 입니다.
 
 <br><br><br>
 
-nginx가 정말 Running 상태인지 8080번 포트로 접속해서 확인도 해보세요.
+nginx가 정말 Running 상태인지 8080번 포트로 접속해서 확인도 해보세요.  
+
 🔗 [Nginx]({{TRAFFIC_HOST1_8080}})
 
 ![h:400](./img/docker_nginx1.png)
