@@ -130,7 +130,7 @@ Successfully built df16f7f47728
 Successfully tagged rogallo/todo-app:1.0.0
 ```
 
-> 💻 명령어 `docker build -t [USER-NAME]/todo-app:1.0.0 .`{{copy}}
+> 💻 명령어 `docker build -t [USER-NAME]/todo-app:1.0.0 .`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
@@ -178,7 +178,7 @@ Successfully built 7a79571ef432
 Successfully tagged rogallo/todo-app:2.0.0
 ```
 
-> 💻 명령어 `docker build -t [USER-NAME]/todo-app:2.0.0 .`{{copy}}
+> 💻 명령어 `docker build -t [USER-NAME]/todo-app:2.0.0 .`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
@@ -191,7 +191,7 @@ rogallo/todo-app   2.0.0     7a79571ef432   56 seconds ago   172MB
 rogallo/todo-app   1.0.0     df16f7f47728   2 minutes ago    172MB
 ```
 
-> 💻 명령어 `docker images [USER-NAME]/todo-app`{{copy}}
+> 💻 명령어 `docker images [USER-NAME]/todo-app`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
@@ -208,7 +208,7 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
 ```
 
-> 💻 명령어 `docker login -u [USER-NAME]`{{copy}}
+> 💻 명령어 `docker login -u [USER-NAME]`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
@@ -246,7 +246,7 @@ a6524c5b12a6: Layer already exists
 2.0.0: digest: sha256:13ba0a28f43b581d260611cd0ecb446eb5b1105334fb5bf9c86e08bbd66bfadb size: 1787
 ```
 
-> 💻 명령어 `docker push [USER-NAME]/todo-app:2.0.0`{{copy}}
+> 💻 명령어 `docker push [USER-NAME]/todo-app:2.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
