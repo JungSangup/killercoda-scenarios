@@ -21,8 +21,8 @@ local     todo-db
 ```
 
 > 💻 명령어 `docker volume list`{{exec}}
->또는`{{exec}}bash
->docker volume ls`{{exec}}
+>또는
+> 💻 명령어 `docker volume ls`{{exec}}
 
 <br><br><br>
 
@@ -55,7 +55,7 @@ ubuntu@ip-172-31-23-60:~$ docker run --detach --publish 3000:3000 --volume todo-
 9649bfa4eea279378bd7ddd21804ffc0028adb873759b7efa83053ca1627dc9f
 ```
 
-> 💻 명령어 `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/todo-app:1.0.0`{{copy}}
+> 💻 명령어 `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 - **[USER-NAME]/todo-app:1.0.0** 이 준비가 안된 경우, **rogallo/101-todo-app:1.0.0**을 이용해주세요. login 없이 사용가능한 public repository의 이미지입니다.
 
@@ -80,8 +80,8 @@ ubuntu@ip-172-31-23-60:~$ docker rm my-todo-manager
 my-todo-manager
 ```
 
-> 💻 명령어 `docker stop my-todo-manager`{{exec}}
-> 💻 명령어 `docker rm my-todo-manager`{{exec}}
+> 💻 명령어 `docker stop my-todo-manager`{{exec}}  
+> 💻 명령어 `docker rm my-todo-manager`{{exec}}  
 > - 컨테이너는 생성할때 --name 옵션으로 이름을 정하면, 이후에 이 이름을 이용할 수 있습니다.
 
 <br><br><br>
@@ -94,7 +94,7 @@ ubuntu@ip-172-31-23-60:~$ docker run --detach --publish 3000:3000 --volume todo-
 c6859ec898566de2e194acd1dd7b1df8832fe035e7e1179deb21c587e66502c9
 ```
 
-> 💻 명령어 `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/todo-app:1.0.0`{{copy}}
+> 💻 명령어 `docker run --detach --publish 3000:3000 --volume todo-db:/etc/todos --name my-todo-manager [USER-NAME]/todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 - **[USER-NAME]/todo-app:1.0.0** 이 준비가 안된 경우, **rogallo/101-todo-app:1.0.0**을 이용해주세요. login 없이 사용가능한 public repository의 이미지입니다.
 
@@ -114,5 +114,5 @@ ubuntu@ip-172-31-23-60:~$ docker volume rm todo-db
 todo-db
 ```
 
-> 💻 명령어 `docker rm -f my-todo-manager`{{exec}}
+> 💻 명령어 `docker rm -f my-todo-manager`{{exec}}  
 > 💻 명령어 `docker volume rm todo-db`{{exec}}
