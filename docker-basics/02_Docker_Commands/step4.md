@@ -227,7 +227,7 @@ a6524c5b12a6: Layer already exists
 1.0.0: digest: sha256:5cee6f196aa06a6ba00a1b7c40a0b674510cf9f931785d9491daaa31af0d9de1 size: 1787
 ```
 
-> 💻 명령어 `docker push [USER-NAME]/todo-app:1.0.0`{{copy}}
+> 💻 명령어 `docker push [USER-NAME]/todo-app:1.0.0`{{copy}}  
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
 <br><br><br>
