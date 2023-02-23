@@ -84,7 +84,7 @@ b0cd02ef4766a2107e2404bc2c637c4a8b3088e4c1608151d6810122c287659c
 ```
 
 > 💻 명령어
-> ````
+>```
 >docker run -d \
 >    --network todo-app --network-alias mysql \
 >    --volume todo-mysql-data:/var/lib/mysql \
@@ -95,7 +95,7 @@ b0cd02ef4766a2107e2404bc2c637c4a8b3088e4c1608151d6810122c287659c
 >    mysql:5.7 \
 >    --character-set-server=utf8mb4 \
 >    --collation-server=utf8mb4_unicode_ci
-> ```{{exec}}
+>```{{exec}}
 
 이전에 배운 **volume**도 사용하네요.  
 데이터의 영속성을 위해서 데이터는 **volume(todo-mysql-data)**에 저장하도록 구성했습니다.  
