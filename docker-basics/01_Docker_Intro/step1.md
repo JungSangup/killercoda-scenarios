@@ -23,7 +23,7 @@ Receiving objects: 100% (54/54), 1.67 MiB | 4.76 MiB/s, done.
 Resolving deltas: 100% (4/4), done.
 ```
 
-> 💻 명령어 `git clone https://github.com/JungSangup/todo_list_manager.git app`{{exec}}
+> 💻 `git clone https://github.com/JungSangup/todo_list_manager.git app`{{exec}}
 
 소스코드 준비가 됐으면 `app` 디렉토리로 이동해서 어떤 파일들이 있는지 살펴볼까요?
 
@@ -41,5 +41,5 @@ drwxrwxr-x 5 ubuntu ubuntu   4096 Jun 17 02:54 src
 -rw-rw-r-- 1 ubuntu ubuntu 179361 Jun 17 02:54 yarn.lock
 ```
 
-> 💻 명령어 `cd app`{{exec}}  
-> 💻 명령어 `ls -al`{{exec}}
+> 💻 `cd app`{{exec}}  
+> 💻 `ls -al`{{exec}}
