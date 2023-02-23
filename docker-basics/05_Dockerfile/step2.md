@@ -5,7 +5,7 @@ docker는 multi-stage build 기능을 제공하기 때문에 최종 docker 이�
 
 <br>
 
-![h:300](./img/docker_multi_stage_build.png)
+![](./img/docker_multi_stage_build.png)
 <br>
 
 애플리케이션 파일인 HelloDocker.java 파일은 그대로 두고 **Dockerfile**을 하나 더 준비하겠습니다.
