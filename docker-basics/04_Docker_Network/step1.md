@@ -199,8 +199,8 @@ Listening on port 3000
 **mysql**과 잘 연결됐다는 로그(Connected to mysql db at host mysql)가 보이네요.
 
 이제 실행된 애플리케이션에 접속하고 오늘 할 일을 몇 개 적어볼까요?  
-- AWS EC2인 경우 인스턴스의 Public IPv4 address로 접속하면 됩니다. (e.g. http://IP:3000/)
-- Security group의 Inbound rule에 3000번 포트에 대한 규칙이 있어야 합니다.
+
+🔗 [ToDo List Manager]({{TRAFFIC_HOST1_3000}})
 
 ![h:200](./img/todo-list-sample3.png)
 
