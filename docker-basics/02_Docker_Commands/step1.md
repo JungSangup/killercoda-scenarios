@@ -33,10 +33,7 @@ ubuntu/dotnet-aspnet             Chiselled Ubuntu runtime image for ASP.NET a…
 ubuntu/cassandra                 Cassandra, an open source NoSQL distributed …   2
 ```
 
-> 💻 명령어
->```bash
->docker search ubuntu
->```{{exec}}
+> 💻 명령어 `docker search ubuntu`{{exec}}
 
 <br><br><br>
 

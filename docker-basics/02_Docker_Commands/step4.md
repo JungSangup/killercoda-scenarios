@@ -38,10 +38,7 @@ Receiving objects: 100% (131/131), 1.68 MiB | 24.63 MiB/s, done.
 Resolving deltas: 100% (51/51), done.
 ```
 
-> 💻 명령어
->```bash
->git clone https://github.com/JungSangup/todo_list_manager.git app
->```{{exec}}
+> 💻 명령어 `git clone https://github.com/JungSangup/todo_list_manager.git app`{{exec}}
 
 <br><br><br>
 
@@ -51,10 +48,7 @@ ubuntu@ip-172-31-23-60:~$ cd app
 ubuntu@ip-172-31-23-60:~/app$
 ```
 
-> 💻 명령어
->```bash
->cd app
->```{{exec}}
+> 💻 명령어 `cd app`{{exec}}
 
 <br><br><br>
 
@@ -65,10 +59,7 @@ v1.0.0
 v2.0.0
 ```
 
-> 💻 명령어
->```bash
->git tag
->```{{exec}}
+> 💻 명령어 `git tag`{{exec}}
 
 <br><br><br>
 
@@ -96,10 +87,7 @@ Turn off this advice by setting config variable advice.detachedHead to false
 HEAD is now at c7a54f7 .
 ```
 
-> 💻 명령어
->```bash
->git checkout v1.0.0
->```{{exec}}
+> 💻 명령어 `git checkout v1.0.0`{{exec}}
 
 <br><br><br>
 
@@ -142,9 +130,7 @@ Successfully built df16f7f47728
 Successfully tagged rogallo/todo-app:1.0.0
 ```
 
-> 💻 명령어
->```bash
->docker build -t [USER-NAME]/todo-app:1.0.0 .
+> 💻 명령어 `docker build -t [USER-NAME]/todo-app:1.0.0 .
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
@@ -158,10 +144,7 @@ Previous HEAD position was c7a54f7 .
 HEAD is now at d1c1aaf Update index.html
 ```
 
-> 💻 명령어
->```bash
->git checkout v2.0.0
->```{{exec}}
+> 💻 명령어 `git checkout v2.0.0`{{exec}}
 
 <br><br><br>
 
@@ -196,9 +179,7 @@ Successfully built 7a79571ef432
 Successfully tagged rogallo/todo-app:2.0.0
 ```
 
-> 💻 명령어
->```bash
->docker build -t [USER-NAME]/todo-app:2.0.0 .
+> 💻 명령어 `docker build -t [USER-NAME]/todo-app:2.0.0 .
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
@@ -212,9 +193,7 @@ rogallo/todo-app   2.0.0     7a79571ef432   56 seconds ago   172MB
 rogallo/todo-app   1.0.0     df16f7f47728   2 minutes ago    172MB
 ```
 
-> 💻 명령어
->```bash
->docker images [USER-NAME]/todo-app
+> 💻 명령어 `docker images [USER-NAME]/todo-app
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
@@ -232,9 +211,7 @@ https://docs.docker.com/engine/reference/commandline/login/#credentials-store
 Login Succeeded
 ```
 
-> 💻 명령어
->```bash
->docker login -u [USER-NAME]
+> 💻 명령어 `docker login -u [USER-NAME]
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
@@ -254,9 +231,7 @@ a6524c5b12a6: Layer already exists
 1.0.0: digest: sha256:5cee6f196aa06a6ba00a1b7c40a0b674510cf9f931785d9491daaa31af0d9de1 size: 1787
 ```
 
-> 💻 명령어
->```bash
->docker push [USER-NAME]/todo-app:1.0.0
+> 💻 명령어 `docker push [USER-NAME]/todo-app:1.0.0
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 
@@ -276,9 +251,7 @@ a6524c5b12a6: Layer already exists
 2.0.0: digest: sha256:13ba0a28f43b581d260611cd0ecb446eb5b1105334fb5bf9c86e08bbd66bfadb size: 1787
 ```
 
-> 💻 명령어
->```bash
->docker push [USER-NAME]/todo-app:2.0.0
+> 💻 명령어 `docker push [USER-NAME]/todo-app:2.0.0
 >```{{copy}}
 > [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
 

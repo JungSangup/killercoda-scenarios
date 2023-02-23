@@ -5,10 +5,7 @@ ubuntu@ip-172-31-23-60:~/app$ docker run --interactive --tty --name my-ubuntu1 u
 root@d68fe3ec9f65:/#
 ```
 
-> 💻 명령어
->```bash
->docker run --interactive --tty --name my-ubuntu1 ubuntu /bin/bash
->```{{exec}}
+> 💻 명령어 `docker run --interactive --tty --name my-ubuntu1 ubuntu /bin/bash`{{exec}}
 
 `--interactive --tty` 는 `-it`로 줄여서 쓸 수도 있습니다.  
 `--interactive --tty (-it)`  로 실행했기 때문에 ubuntu의 bash shell에 콘솔로 연결되었습니다. (프롬프트 확인!)
@@ -32,10 +29,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-> 💻 명령어
->```bash
->cat /etc/os-release
->```{{exec}}
+> 💻 명령어 `at /etc/os-release`{{exec}}
 
 <br><br><br>
 
@@ -48,10 +42,7 @@ exit
 ubuntu@ip-172-31-23-60:~$
 ```
 
-> 💻 명령어
->```bash
->exit
->```{{exec}}
+> 💻 명령어 `exit`{{exec}}
 
 * 참고 : `exit`는 컨테이너를 **stop**합니다. **stop**하지 않고 detach만 하기 위해서는 `ctrl-p` + `ctrl-q` 를 이용하면 됩니다.
 * detach한 경우는 [docker attach](https://docs.docker.com/engine/reference/commandline/attach/) 명령어를 이용하여 다시 접속할 수 있습니다.
@@ -64,10 +55,7 @@ ubuntu@ip-172-31-23-60:~/app$ docker run --interactive --tty --name my-ubuntu2 u
 root@cac6c7cab1f9:/#
 ```
 
-> 💻 명령어
->```bash
->docker run --interactive --tty --name my-ubuntu2 ubuntu:18.04 /bin/bash
->```{{exec}}
+> 💻 명령어 `docker run --interactive --tty --name my-ubuntu2 ubuntu:18.04 /bin/bash`{{exec}}
 
 <br><br><br>
 
@@ -90,10 +78,7 @@ VERSION_CODENAME=bionic
 UBUNTU_CODENAME=bionic
 ```
 
-> 💻 명령어
->```bash
->cat /etc/os-release
->```{{exec}}
+> 💻 명령어 `cat /etc/os-release`{{exec}}
 
 둘의 차이를 찾으셨나요?   ಠ_ಠ   (힌트 : VERSION)
 
@@ -112,10 +97,7 @@ exit
 ubuntu@ip-172-31-23-60:~$
 ```
 
-> 💻 명령어
->```bash
->exit
->```{{exec}}
+> 💻 명령어 `exit`{{exec}}
 
 <br><br><br>
 
@@ -136,10 +118,7 @@ Status: Downloaded newer image for nginx:latest
 ubuntu@ip-172-31-23-60:~/app$
 ```
 
-> 💻 명령어
->```bash
->docker run --detach --name my-nginx --publish 8080:80 nginx
->```{{exec}}
+> 💻 명령어 `docker run --detach --name my-nginx --publish 8080:80 nginx`{{exec}}
 
 이전에 `--interactive` 옵션을 적용했을때와는 달리, 프롬프트가 그대로 있네요.
 
@@ -154,10 +133,7 @@ cac6c7cab1f9   ubuntu:18.04   "/bin/bash"              About a minute ago   Exit
 d68fe3ec9f65   ubuntu         "/bin/bash"              2 minutes ago        Exited (0) About a minute ago                                           my-ubuntu1
 ```
 
-> 💻 명령어
->```bash
->docker ps --all
->```{{exec}}
+> 💻 명령어 `docker ps --all`{{exec}}
 
 이전에 실행했던 ubuntu와 nginx가 보일거예요.  
 ubuntu는 **Exited** 상태이고, nginx는 **Running** 상태 입니다.
@@ -178,10 +154,7 @@ ubuntu@ip-172-31-23-60:~/app$ docker stop $(docker ps --filter "name=my-nginx" -
 2fc9e3a49e91
 ```
 
-> 💻 명령어
->```bash
->docker stop $(docker ps --filter "name=my-nginx" --quiet)
->```{{exec}}
+> 💻 명령어 `docker stop $(docker ps --filter "name=my-nginx" --quiet)`{{exec}}
 
 <br>
 
@@ -194,10 +167,7 @@ cac6c7cab1f9   ubuntu:18.04   "/bin/bash"              2 minutes ago        Exit
 d68fe3ec9f65   ubuntu         "/bin/bash"              3 minutes ago        Exited (0) 2 minutes ago                  my-ubuntu1
 ```
 
-> 💻 명령어
->```bash
->docker ps --all
->```{{exec}}
+> 💻 명령어 `docker ps --all`{{exec}}
 - `Exited` 상태인 컨테이너는 `--all (-a)` 옵션을 적용해야 조회가 됩니다.
 
  `docker start` 와 `docker restart` 는 직접 명령어를 만들어서 한번 해보세요.

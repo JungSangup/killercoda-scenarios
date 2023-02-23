@@ -10,10 +10,7 @@ Status: Downloaded newer image for ubuntu:latest
 docker.io/library/ubuntu:latest
 ```
 
-> 💻 명령어
->```bash
->docker pull ubuntu
->```{{exec}}
+> 💻 명령어 `docker pull ubuntu`{{exec}}
 
 <br><br><br>
 
@@ -27,10 +24,7 @@ Status: Downloaded newer image for ubuntu:18.04
 docker.io/library/ubuntu:18.04
 ```
 
-> 💻 명령어
->```bash
->docker pull ubuntu:18.04
->```{{exec}}
+> 💻 명령어 `docker pull ubuntu:18.04`{{exec}}
 
 <br><br><br>
 
@@ -42,9 +36,6 @@ ubuntu       18.04     5d2df19066ac   2 weeks ago   63.1MB
 ubuntu       latest    58db3edaf2be   2 weeks ago   77.8MB
 ```
 
-> 💻 명령어
->```bash
->docker images ubuntu
->```{{exec}}
+> 💻 명령어 `docker images ubuntu`{{exec}}
 
 **tag**를 명시하지 않은 경우는 default tag인 `latest`를 받아오네요.  

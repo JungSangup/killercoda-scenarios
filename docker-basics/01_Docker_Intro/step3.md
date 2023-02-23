@@ -10,7 +10,7 @@ $ docker run --detach --publish 3000:3000 docker-101
 4480ffcd6fa67de20f4529cb2ccd3e0b8fba7c63fc036541c7bfd40062db2cb7
 ```
 
-> 💻 `docker run --detach --publish 3000:3000 docker-101`{{exec}}
+> 💻 명령어 `docker run --detach --publish 3000:3000 docker-101`{{exec}}
 
 그리고, 잘 실행되고 있는지 볼까요?
 
@@ -20,7 +20,7 @@ CONTAINER ID   IMAGE        COMMAND                  CREATED          STATUS    
 4480ffcd6fa6   docker-101   "docker-entrypoint.s…"   27 seconds ago   Up 26 seconds   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   youthful_noether
 ```
 
-> 💻 `docker ps`{{exec}}
+> 💻 명령어 `docker ps`{{exec}}
 
 위 처럼 docker-101 이 보이면 정상입니다.
 
