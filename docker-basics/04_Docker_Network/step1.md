@@ -176,18 +176,8 @@ ubuntu@ip-172-31-23-60:~$ docker run -dp 3000:3000 \
 1dce849ca625a5c4b4925a90fe0a08dc272cf904682b3554210b94d183f5dfd2
 ```
 
-> 💻 명령어 
-> ```
->docker run -dp 3000:3000 \
-> --network todo-app \
-> --env MYSQL_HOST=mysql \
-> --env MYSQL_USER=root \
-> --env MYSQL_PASSWORD=secret \
-> --env MYSQL_DB=todos \
-> --name my-todo-manager \
->[USER-NAME]/todo-app:1.0.0
->```{{copy}}
-> [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.
+> 💻 명령어 `docker run -dp 3000:3000 --network todo-app --env MYSQL_HOST=mysql --env MYSQL_USER=root --env MYSQL_PASSWORD=secret --env MYSQL_DB=todos --name my-todo-manager [USER-NAME]/todo-app:1.0.0`{{copy}}  
+> [USER-NAME] 에는 여러분의 정보로 채워넣어 주세요.  
 - **[USER-NAME]/todo-app:1.0.0** 이 준비가 안된 경우, **rogallo/101-todo-app:1.0.0**을 이용해주세요. login 없이 사용가능한 public repository의 이미지입니다.
 
 `--network`옵션으로 mysql과 동일한 네트워크로 설정했고,  
@@ -238,7 +228,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 mysql>
 ```
 
-> 💻 명령어 `docker exec -it my-mysql mysql -p todos`{{exec}}
+> 💻 명령어 `docker exec -it my-mysql mysql -p todos`{{exec}}  
 - Password는 **secret**입니다.  
 
 <br><br><br>
@@ -262,7 +252,7 @@ mysql> select * from todo_items;
 
 화면에서 입력한 오늘의 할 일이 todo_items table에 잘 저장되어 있나요?
 
-`exit` 명령으로 나와주시구요.
+`exit` 명령으로 나와주시구요.  
 > 💻 명령어 `exit`{{exec}}
 
 사용된 컨테이너를 정리하겠습니다.
