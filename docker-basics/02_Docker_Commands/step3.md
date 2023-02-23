@@ -29,7 +29,7 @@ PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-poli
 UBUNTU_CODENAME=jammy
 ```
 
-> 💻 명령어 `at /etc/os-release`{{exec}}
+> 💻 명령어 `cat /etc/os-release`{{exec}}
 
 <br><br><br>
 
