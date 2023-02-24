@@ -1,6 +1,6 @@
 {
   "title": "07. Kubernetes Overview",
-  "description": "Kubernetes 기본 명령어 실습",
+  "description": "kubectl 기본 명령어 실습",
   "difficulty": "beginner",
   "time": "10 minutes",
   "details": {
@@ -9,7 +9,7 @@
     },    
     "steps": [
 		  {
-		    "title": "Step 1 - Kubernetes 기본 명령어 사용해보기",
+		    "title": "Step 1 - kubectl 기본 명령어 사용",
 		    "text": "step1.md"
 		  }
 	  ]
