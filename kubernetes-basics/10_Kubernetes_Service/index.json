@@ -23,8 +23,7 @@
             {"file": "nginx-clusterip-service.yaml", "target": "~/lab"},
             {"file": "nginx-nodeport-service.yaml", "target": "~/lab"},
             {"file": "nginx-loadbalancer-service.yaml", "target": "~/lab"},
-            {"file": "todo-deployment.yaml", "target": "~/lab"},
-            {"file": "todo-nodeport-service.yaml", "target": "~/lab"}
+            {"file": "nginx-ingress.yaml", "target": "~/lab"}
         ]
     }
   },
